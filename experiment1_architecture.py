@@ -8,7 +8,7 @@ Compares 8 models across two families:
 Goal: Show how both architecture AND size affect performance,
       with and without keyword-based memory optimization.
 
-KPIs: Step Coverage (deterministic), Latency (measured)
+KPIs: Step Coverage (deterministic), Latency (measured), Token Count (measured)
 """
 
 import requests
@@ -296,6 +296,7 @@ for model_info in MODELS:
     model_results = {k: [] for k in [
         "coverage_no_mem", "coverage_mem",
         "latency_no_mem",  "latency_mem",
+        "tokens_no_mem",   "tokens_mem",
     ]}
 
     for t in TASKS:
@@ -305,22 +306,22 @@ for model_info in MODELS:
         print(f"\n  TASK: {task}")
 
         # WITHOUT MEMORY
-        raw1, lat1, _ = generate(model_name, prompt_no_memory(task))
+        raw1, lat1, tok1 = generate(model_name, prompt_no_memory(task))
         plan1 = extract_plan(raw1)
         sc1   = score_plan(plan1, keywords)
         print(f"\n  --- WITHOUT MEMORY ---")
         for line in plan1.split("\n")[:5]:
             print(f"    {line}")
-        print(f"  → coverage={sc1}  latency={lat1}s")
+        print(f"  → coverage={sc1}  latency={lat1}s  tokens={tok1}")
 
         # WITH MEMORY
-        raw2, lat2, _ = generate(model_name, prompt_with_memory(task))
+        raw2, lat2, tok2 = generate(model_name, prompt_with_memory(task))
         plan2 = extract_plan(raw2)
         sc2   = score_plan(plan2, keywords)
         print(f"\n  --- WITH MEMORY ---")
         for line in plan2.split("\n")[:5]:
             print(f"    {line}")
-        print(f"  → coverage={sc2}  latency={lat2}s")
+        print(f"  → coverage={sc2}  latency={lat2}s  tokens={tok2}")
 
         add_to_memory(task, plan2)
 
@@ -328,6 +329,8 @@ for model_info in MODELS:
         model_results["coverage_mem"].append(sc2)
         model_results["latency_no_mem"].append(lat1)
         model_results["latency_mem"].append(lat2)
+        model_results["tokens_no_mem"].append(tok1)
+        model_results["tokens_mem"].append(tok2)
 
     # Save memory to disk
     save_memory(model_name)
@@ -336,6 +339,7 @@ for model_info in MODELS:
     print(f"\n  ── KPI SUMMARY ──")
     print(f"  Step coverage: {avg(model_results['coverage_no_mem'])} → {avg(model_results['coverage_mem'])}")
     print(f"  Latency (avg): {avg(model_results['latency_no_mem'])}s → {avg(model_results['latency_mem'])}s")
+    print(f"  Tokens (avg):  {avg(model_results['tokens_no_mem'])} → {avg(model_results['tokens_mem'])}")
 
 # ============================================================
 # PLOTTING
@@ -423,7 +427,35 @@ plt.savefig(path2, dpi=150, bbox_inches="tight")
 plt.close()
 print(f"✅ Saved: {path2}")
 
-# Save JSON
+# Plot 3: Token count
+fig, ax = plt.subplots(figsize=(14, 5))
+tok_no  = [avg(results[m]["tokens_no_mem"]) for m in model_names]
+tok_mem = [avg(results[m]["tokens_mem"])    for m in model_names]
+
+ax.bar(x - w/2, tok_no,  w, color=bar_colors_base, alpha=0.85, label="Baseline")
+ax.bar(x + w/2, tok_mem, w, color=bar_colors_mem,  alpha=0.90, label="With memory")
+
+for i, (v1, v2) in enumerate(zip(tok_no, tok_mem)):
+    ax.text(x[i] - w/2, v1 + 1, f"{int(v1)}", ha="center", fontsize=8, color="#444441")
+    ax.text(x[i] + w/2, v2 + 1, f"{int(v2)}", ha="center", fontsize=8, color="#0C447C")
+
+ax.axvline(x=2.5, color="#B4B2A9", linestyle="--", linewidth=1.5, alpha=0.7)
+ax.text(1.0, ax.get_ylim()[1] * 0.95 if ax.get_ylim()[1] > 0 else 10,
+        "Mixed Families", ha="center", fontsize=9, color=C_MIXED, style="italic")
+ax.text(5.5, ax.get_ylim()[1] * 0.95 if ax.get_ylim()[1] > 0 else 10,
+        "Qwen3.5 Family", ha="center", fontsize=9, color=C_QWEN, style="italic")
+ax.set_xticks(x)
+ax.set_xticklabels(model_labels, fontsize=9)
+ax.set_ylabel("Average Token Count", fontsize=11)
+ax.set_title("Experiment 1 — Token Count: Baseline vs Memory Optimized",
+             fontsize=12, fontweight="bold")
+ax.legend(fontsize=9)
+ax.grid(axis="y", alpha=0.3)
+plt.tight_layout()
+path3 = os.path.join(PLOTS_DIR, "exp1_tokens.png")
+plt.savefig(path3, dpi=150, bbox_inches="tight")
+plt.close()
+print(f"✅ Saved: {path3}")
 serializable = {
     m: {k: [float(v) for v in vals] for k, vals in r.items()}
     for m, r in results.items()

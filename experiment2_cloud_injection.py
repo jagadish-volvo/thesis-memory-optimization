@@ -6,9 +6,6 @@ Step 2: Inject that cloud memory into each small model
 Step 3: Small models run the same 5 tasks WITH the cloud memory
 Step 4: Compare — can small models perform like the large model?
 
-This directly answers the supervisor's question:
-"Use the cloud model to run a task, store that in memory,
-then inject that memory in the small models to check performances."
 """
 
 import requests
@@ -330,6 +327,8 @@ def run_small_models_with_cloud_memory(cloud_memory):
             "coverage_cloud_mem",   # with 397B cloud memory injected
             "latency_baseline",
             "latency_cloud_mem",
+            "tokens_baseline",
+            "tokens_cloud_mem",
         ]}
 
         for t in TASKS:
@@ -339,33 +338,36 @@ def run_small_models_with_cloud_memory(cloud_memory):
             print(f"\n  TASK: {task}")
 
             # BASELINE — no memory
-            raw1, lat1, _ = generate(model_name, prompt_no_memory(task))
+            raw1, lat1, tok1 = generate(model_name, prompt_no_memory(task))
             plan1 = extract_plan(raw1)
             sc1   = score_plan(plan1, keywords)
             print(f"\n  --- BASELINE (no memory) ---")
             for line in plan1.split("\n")[:5]:
                 print(f"    {line}")
-            print(f"  → coverage={sc1}  latency={lat1}s")
+            print(f"  → coverage={sc1}  latency={lat1}s  tokens={tok1}")
 
             # WITH CLOUD MEMORY
             cloud_prompt = build_cloud_injection_prompt(task, cloud_memory)
-            raw2, lat2, _ = generate(model_name, cloud_prompt)
+            raw2, lat2, tok2 = generate(model_name, cloud_prompt)
             plan2 = extract_plan(raw2)
             sc2   = score_plan(plan2, keywords)
             print(f"\n  --- WITH 397B CLOUD MEMORY ---")
             for line in plan2.split("\n")[:5]:
                 print(f"    {line}")
-            print(f"  → coverage={sc2}  latency={lat2}s")
+            print(f"  → coverage={sc2}  latency={lat2}s  tokens={tok2}")
 
             model_results["coverage_baseline"].append(sc1)
             model_results["coverage_cloud_mem"].append(sc2)
             model_results["latency_baseline"].append(lat1)
             model_results["latency_cloud_mem"].append(lat2)
+            model_results["tokens_baseline"].append(tok1)
+            model_results["tokens_cloud_mem"].append(tok2)
 
         results[model_name] = model_results
         print(f"\n  ── KPI SUMMARY ──")
         print(f"  Step coverage: {avg(model_results['coverage_baseline'])} → {avg(model_results['coverage_cloud_mem'])}")
         print(f"  Latency (avg): {avg(model_results['latency_baseline'])}s → {avg(model_results['latency_cloud_mem'])}s")
+        print(f"  Tokens (avg):  {avg(model_results['tokens_baseline'])} → {avg(model_results['tokens_cloud_mem'])}")
 
     return results
 
@@ -457,6 +459,31 @@ def plot_results(results, cloud_memory):
     plt.savefig(path2, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"✅ Saved: {path2}")
+
+    # Plot 3: Token count comparison
+    fig, ax = plt.subplots(figsize=(14, 5))
+    tok_base  = [avg(results[m]["tokens_baseline"])  for m in model_names]
+    tok_cloud = [avg(results[m]["tokens_cloud_mem"]) for m in model_names]
+
+    ax.bar(x - w/2, tok_base,  w, color=C_BASE,  alpha=0.85, label="Baseline (no memory)")
+    ax.bar(x + w/2, tok_cloud, w, color=C_CLOUD, alpha=0.90, label="With 397B cloud memory")
+
+    for i, (v1, v2) in enumerate(zip(tok_base, tok_cloud)):
+        ax.text(x[i] - w/2, v1 + 1, f"{int(v1)}", ha="center", fontsize=8, color="#444441")
+        ax.text(x[i] + w/2, v2 + 1, f"{int(v2)}", ha="center", fontsize=8, color=C_CLOUD)
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(model_labels, fontsize=9)
+    ax.set_ylabel("Average Token Count", fontsize=11)
+    ax.set_title("Experiment 2 — Token Count: Baseline vs With 397B Cloud Memory",
+                 fontsize=12, fontweight="bold")
+    ax.legend(fontsize=9)
+    ax.grid(axis="y", alpha=0.3)
+    plt.tight_layout()
+    path3 = os.path.join(PLOTS_DIR, "exp2_tokens.png")
+    plt.savefig(path3, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"✅ Saved: {path3}")
 
     # Save JSON
     serializable = {
