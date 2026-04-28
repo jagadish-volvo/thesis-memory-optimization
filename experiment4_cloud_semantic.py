@@ -316,6 +316,10 @@ def retrieve_cloud_semantic(task, collection, top_k=2):
 # PROMPTS
 # ============================================================
 
+# Models that struggle with structured reference blocks
+# Use a simpler conversational prompt for these
+SIMPLE_PROMPT_MODELS = ["phi", "tinyllama"]
+
 def prompt_baseline(task):
     return (
         "You are a battery verification engineer.\n"
@@ -324,32 +328,54 @@ def prompt_baseline(task):
         f"TASK: {task}\n\nPLAN:\n1."
     )
 
-def prompt_cloud_semantic(task, collection):
+def prompt_cloud_semantic(task, collection, model_name=""):
     """
     Build prompt injecting semantically retrieved cloud expert plans.
     Uses ChromaDB cosine similarity to find most relevant past solutions.
+    Uses a simpler format for weaker models (Phi, TinyLlama) that struggle
+    with structured reference blocks.
     """
     relevant = retrieve_cloud_semantic(task, collection)
     if not relevant:
         return prompt_baseline(task)
 
-    mem_lines = ["[EXPERT MEMORY — semantically retrieved cloud model solutions]"]
-    for i, entry in enumerate(relevant, 1):
-        numbered = [l.strip() for l in entry["plan"].split("\n")
-                    if l.strip() and l.strip()[0].isdigit()][:3]
-        mem_lines.append(f"Ref {i}: {entry['task']}")
-        if numbered:
-            mem_lines.append("Steps: " + " | ".join(numbered))
-    mem_block = "\n".join(mem_lines)
+    # Check if this model needs a simpler prompt
+    is_simple = any(s in model_name.lower() for s in SIMPLE_PROMPT_MODELS)
 
-    return (
-        "You are a battery verification engineer.\n\n"
-        f"{mem_block}\n\n"
-        "Using the expert reference above as guidance, "
-        "generate a numbered step-by-step technical plan for the task below.\n"
-        "Rules: numbered steps only (1. 2. 3.) | max 6 steps | no extra text\n\n"
-        f"TASK: {task}\n\nPLAN:\n1."
-    )
+    if is_simple:
+        # Simple conversational format for weaker models
+        # Avoid structured blocks that confuse small models
+        best = relevant[0]
+        numbered = [l.strip() for l in best["plan"].split("\n")
+                    if l.strip() and l.strip()[0].isdigit()][:3]
+        example_steps = "\n".join(numbered) if numbered else ""
+
+        return (
+            "You are a battery verification engineer.\n"
+            "Generate a numbered step-by-step technical plan.\n"
+            "Rules: numbered steps only (1. 2. 3.) | max 6 steps | no extra text\n\n"
+            f"Example for a similar task:\n{example_steps}\n\n"
+            f"TASK: {task}\n\nPLAN:\n1."
+        )
+    else:
+        # Full structured format for capable models
+        mem_lines = ["[EXPERT MEMORY — semantically retrieved cloud model solutions]"]
+        for i, entry in enumerate(relevant, 1):
+            numbered = [l.strip() for l in entry["plan"].split("\n")
+                        if l.strip() and l.strip()[0].isdigit()][:3]
+            mem_lines.append(f"Ref {i}: {entry['task']}")
+            if numbered:
+                mem_lines.append("Steps: " + " | ".join(numbered))
+        mem_block = "\n".join(mem_lines)
+
+        return (
+            "You are a battery verification engineer.\n\n"
+            f"{mem_block}\n\n"
+            "Using the expert reference above as guidance, "
+            "generate a numbered step-by-step technical plan for the task below.\n"
+            "Rules: numbered steps only (1. 2. 3.) | max 6 steps | no extra text\n\n"
+            f"TASK: {task}\n\nPLAN:\n1."
+        )
 
 # ============================================================
 # STEP 3 — Run small models with cloud semantic memory
@@ -393,10 +419,23 @@ def run_small_models(cloud_collection, cloud_plans):
             # CLOUD SEMANTIC MEMORY
             raw2, lat2, tok2 = generate(
                 model_name,
-                prompt_cloud_semantic(task, cloud_collection)
+                prompt_cloud_semantic(task, cloud_collection, model_name)
             )
             plan2 = extract_plan(raw2)
             sc2   = score_plan(plan2, keywords)
+
+            # Retry with simple baseline prompt if response too short
+            # This prevents catastrophic failures from pulling averages down
+            if tok2 < 20:
+                print(f"  [WARN] Response too short ({tok2} tokens), retrying with simplified prompt...")
+                raw2, lat2, tok2 = generate(
+                    model_name,
+                    prompt_baseline(task)
+                )
+                plan2 = extract_plan(raw2)
+                sc2   = score_plan(plan2, keywords)
+                print(f"  [INFO] Retry result: tokens={tok2}")
+
             print(f"\n  --- WITH CLOUD SEMANTIC MEMORY ---")
             for line in plan2.split("\n")[:5]:
                 print(f"    {line}")
