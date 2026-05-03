@@ -1,0 +1,502 @@
+[
+  {
+    "task": "What is the primary function of a Programmable Logic Controller (PLC) in an automated production line?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "Which type of sensor is most commonly used to detect the presence of metal objects in a quality control station?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "How does a SCADA system differ from a standard PLC in terms of its operational scope within a factory?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the main purpose of a pneumatic cylinder in a robotic welding cell?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What role does a Manufacturing Execution System (MES) play in connecting shop floor data to enterprise resource planning software?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the primary function of a Programmable Logic Controller (PLC) in a discrete manufacturing environment?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "Which safety system is specifically designed to detect and prevent personnel from entering hazardous zones around rotating machinery?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "How does a Frequency Inverter (VFD) control the speed of an electric motor in an industrial drive system?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the main purpose of a Machine Tool Monitoring System in a CNC machining center?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "Which pneumatic component is typically used to convert compressed air energy into rotational motion?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the primary function of a SCADA system in a water treatment plant?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "In CNC machining, what is the purpose of the G-code command G01?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "How does a pneumatic cylinder convert compressed air into linear motion in an automation cell?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the main difference between Statistical Process Control (SPC) and traditional inspection methods?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What safety protocol is typically required when performing maintenance on a machine guarded by an e-stop button?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the primary function of a Programmable Logic Controller (PLC) in modern manufacturing automation systems?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "In a CNC machining environment, what is the specific role of the G-code and M-code within the program structure?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "How does a 4-20mA current loop typically transmit analog sensor data over long industrial distances compared to voltage signals?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the fundamental difference between a solenoid valve's direct-on-line operation and its pilot-operated control method?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "Which safety standard specifically outlines the requirements for protective equipment and hazardous area classification in industrial settings?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the primary function of a Programmable Logic Controller (PLC) in an industrial automation system?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "How does a SCADA system differ from a standard PLC regarding data monitoring and control capabilities?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the specific purpose of a pneumatic proportional valve in fluid power control applications?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "Which safety standard specifically addresses the design of machinery to prevent accidents involving hazardous energy?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "What is the main role of a Material Requirement Planning (MRP) system in supply chain management?",
+    "category": "simple",
+    "category_label": "Simple Questions"
+  },
+  {
+    "task": "Explain the sequence of actions a pneumatic safety interlock system performs when a robot cell door is opened during an automated assembly line, specifically detailing how it cuts power to the actuators and engages the emergency stop circuit.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Describe the process engineering steps required to optimize the flow rate and temperature distribution in a large-scale polymer extruder to prevent material degradation while maintaining consistent wall thickness.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Outline the troubleshooting procedure for a CNC machine experiencing intermittent tool chatter, including how to analyze spindle vibration data, check tool wear, and adjust feed rates or coolant pressure to resolve the issue.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Compare the operational advantages and limitations of using a SCADA system versus a direct PLC-based monitoring approach for managing real-time data in a pharmaceutical manufacturing environment regarding batch traceability.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Detail the cause-and-effect relationship between poor hydraulic filtration maintenance and the accelerated failure of variable displacement pumps in a heavy-duty manufacturing press, focusing on valve sticking and system pressure instability.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "In a CNC machining cell, explain the specific role of tool length compensation and how it differs from diameter compensation when programming a tool path for a variable-height pocket, including the sequence of operations required to avoid collisions.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Compare the operational reliability and maintenance frequency of PLC-based logic control versus a modern Industrial IoT (IIoT) cloud-based control system for a remote pump station, focusing on latency and the implications for real-time shutdowns.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Describe the cause-and-effect relationship between fluid viscosity changes in a hydraulic cylinder due to temperature fluctuations and the resulting impact on actuator speed and power consumption in a heavy lifting crane.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Outline the critical safety interlock mechanisms required in a welding robot cell to prevent arc flash and mechanical entanglement, detailing how emergency stop buttons and light curtains interact with the main controller to de-energize the system.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Explain the process of statistical process control (SPC) using a control chart to detect a shift in mean production output on an automated assembly line, and describe the corrective actions a technician should take when a \"runaway\" condition is identified.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Explain the operational sequence and safety interlocks required when operating a hydraulic press in a metal stamping line, specifically detailing how the system prevents accidental activation if a worker's hand enters the dead zone.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Describe the logic behind a SCADA system's alarm hierarchy that distinguishes between a \"warning\" for a minor pressure fluctuation and a \"critical\" alert that triggers an automatic shutdown in a chemical mixing process.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Analyze the cause-and-effect relationship between excessive vibration in a CNC milling machine and the resulting surface finish quality, and propose two specific procedural changes to the toolpath or machine parameters to mitigate this issue.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Compare the maintenance strategies of a predictive maintenance system based on industrial IoT sensors versus a traditional reactive maintenance approach for rotating equipment like pumps and compressors in a petrochemical plant.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Outline the step-by-step procedure for calibrating a laser welder's focus and power settings to ensure consistent penetration depth in a high-speed automotive assembly line, emphasizing the importance of repeatability in the welding parameters.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "In a high-speed CNC machining center, explain the specific sequence of events that occurs when the controller detects a tool collision, detailing how the emergency stop signal is propagated through the electrical system to cut power to the servos and engage the mechanical brake.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Describe the operational difference between a standard pressure-relief valve and a back-pressure regulator used in a pneumatic conveying system, and explain why a back-pressure regulator is essential for maintaining consistent material flow rates in long-distance pipelines.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Outline the root-cause analysis steps required to diagnose a recurring intermittent alarm in a SCADA system for a water treatment plant, specifically focusing on differentiating between a faulty field device, a communication protocol error, and a misconfigured logic point in the central database.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Explain the cause-and-effect relationship between thermal expansion in a large-scale hydraulic press and the resulting dimensional inaccuracies in the final product, and describe how a closed-loop feedback sensor system compensates for this mechanical shift during operation.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Discuss the challenges of implementing a predictive maintenance strategy for a batch reactor using industrial IoT sensors, including how to handle varying process conditions between different production batches to ensure the maintenance algorithms generate accurate failure predictions.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Compare the operational principles of a SCADA system and an MES system in a modern textile mill, specifically explaining how data flows from field devices like pressure sensors to the central database in each architecture and the typical end-user applications for that data.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Describe the step-by-step procedure for performing a vibration analysis on a high-speed CNC spindle to diagnose early-stage bearing failure, including how to interpret the specific frequency signatures that distinguish mechanical faults from normal operational noise.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Explain the cause-and-effect relationship between air pressure fluctuations in a pneumatic conveying system and the risk of material segregation, detailing how adjusting the feeder valve timing can stabilize the flow rate in a food processing facility.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Outline the safety protocols and engineering controls required to manage high-voltage electrical isolation during a maintenance shutdown of an automated assembly line, emphasizing the difference between \"dead front\" and \"dead zone\" configurations in electrical switchgear.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Analyze the impact of changing a batch size in a continuous fermentation process on the overall system stability, discussing how the controller must adjust feed rates and agitation speed to prevent bacterial contamination while maintaining consistent product yield.",
+    "category": "medium",
+    "category_label": "Medium Complexity"
+  },
+  {
+    "task": "Develop a comprehensive diagnostic procedure for a recurring overheating fault in the hydraulic cooling system of a multi-axis robotic welding cell, detailing the steps for isolating the radiator bypass valve, checking oil viscosity versus ambient temperature correlations, verifying the pump flow rate against thermal load calculations, and recalibrating the temperature controller PID parameters.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Design a fail-safe logic sequence for an automated conveyor belt sorting system that integrates pressure sensors at multiple intervals and a central SCADA interface, ensuring the system safely stops and engages emergency brakes if an object larger than the defined threshold is detected while maintaining data logging of the event for root cause analysis.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Create a detailed validation protocol for introducing a new granular additive into a continuous chemical mixing process, covering the initial batch size determination, the calculation of heat dissipation rates for the mixer impellers, the simulation of viscosity changes over time, and the establishment of quality control checkpoints for pH and concentration before full-scale production.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Formulate a strategic maintenance schedule for a large industrial air compressor network that includes predictive analysis of motor vibration patterns, rotation of oil filters based on particulate count thresholds, inspection of the aftercooler for condensation buildup, and optimization of the cycle timing to reduce overall energy consumption without compromising output pressure stability.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Engineer a software integration plan to connect legacy barcode scanners with a modern ERP system for inventory tracking in a pharmaceutical manufacturing line, addressing the necessary data mapping, error handling protocols for unreadable codes, the design of a real-time alert system for stock discrepancies, and the security measures required to protect sensitive patient data during the synchronization process.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Diagnose a recurring thermal runaway event in a high-pressure hydraulic cooling loop of a petrochemical reactor by correlating sensor logs, valve actuation sequences, and fluid viscosity data to identify the specific component failure requiring immediate isolation and repair.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Develop a comprehensive software integration protocol for a new SCADA system that must synchronize real-time data from 50 distributed PLCs across three separate factory floors while ensuring sub-200ms latency and maintaining historical data integrity for regulatory compliance audits.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Design a multi-stage validation procedure for a new industrial robotic cell performing automated weld seam verification on large-scale steel girders, including steps for collision avoidance logic programming, thermal stress simulation, and operator safety interlock testing.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Create a detailed corrective action plan to reduce operator error rates in a pneumatic assembly line by redesigning the human-machine interface (HMI) and implementing a new feedback mechanism that provides real-time quality alerts directly to the control panel of each station.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Evaluate the lifecycle efficiency of a modular conveyor belt system in a food processing facility by calculating energy consumption per unit, waste heat recovery potential, and material throughput capacity, then propose an optimization strategy to reduce operational costs by 15% over the next fiscal year.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Develop a comprehensive safety interlock and emergency stop logic sequence for a multi-axis robotic welding cell, ensuring compliance with ISO 13849-1 standards, by mapping sensor inputs to PLC outputs, defining fail-safe states, and validating response times against hazardous zones.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Design a closed-loop thermal management and fluid filtration protocol for a large-scale hydraulic press system used in aerospace forging, including steps for oil degradation monitoring, pump pressure regulation, and contamination removal scheduling.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Create a detailed root cause analysis and corrective action procedure for a recurring vibration anomaly in a centrifugal compressor unit, requiring diagnostic tool calibration, spectral analysis interpretation, bearing wear assessment, and mechanical alignment correction.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Outline a step-by-step validation and risk assessment process for introducing a new programmable logic controller (PLC) into an existing SCADA network, covering hardware compatibility testing, network latency optimization, cybersecurity penetration simulation, and data integrity verification.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Formulate a preventive maintenance and condition-based monitoring strategy for a continuous glass bottle filling line, integrating sensor data analysis for capping torque consistency, conveyor belt wear prediction, and automated lubrication cycle adjustment.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Design a full-scale preventive maintenance schedule for a high-speed CNC milling machine used in automotive part manufacturing, including specific intervals for lubrication, tool wear monitoring via vibration analysis, and ball-screw calibration checks.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Develop a fault diagnosis and isolation protocol for a hydraulic pressure loss in a multi-axis robotic welding cell, covering steps from sensor data correlation, valve isolation testing, fluid contamination analysis, and pump performance verification.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Create a detailed production validation plan for a new batch of aerospace turbine blades, involving statistical process control (SPC) charting, non-destructive testing results review, dimensional tolerance analysis, and final heat treatment certification.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Engineer a fail-safe logic sequence for a critical SCADA system controlling a chemical batching process, integrating redundant pressure sensors, automatic valve locking mechanisms, and emergency shutdown triggers for temperature spikes.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Design a comprehensive industrial IoT data architecture for a smart factory floor, specifying sensor types for predictive maintenance, network topology for low-latency control signals, cloud storage protocols for historical trend analysis, and real-time visualization dashboards.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Develop a comprehensive fault diagnosis and recovery protocol for a PLC-controlled automated packaging line where the vision inspection system falsely rejects green-colored bottles due to variable lighting conditions in the packaging bay.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Design a redundant hydraulic circuit upgrade for a heavy-duty press in the aerospace sector to meet ISO 4413 safety standards while ensuring zero-pressure maintenance during production cycles.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Create a data integration strategy to map and synchronize real-time SCADA data from five disparate legacy machine controllers to a modern industrial IoT cloud platform for predictive vibration analysis.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Formulate a detailed quality control validation plan to verify the dimensional tolerances of turbine blades manufactured by a multi-axis CNC machining cluster using non-contact laser scanning and statistical process control.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Engineer a fail-safe emergency stop sequence and interlock logic for a robotic arc welding cell to prevent hazardous collisions between the robot arm and the automated overhead crane system.",
+    "category": "complex",
+    "category_label": "Complex Long Tasks"
+  },
+  {
+    "task": "Explain the logical flow and data structures required to build a predictive maintenance framework that correlates temperature trends and vibration frequencies from multiple CNC machines to forecast tool wear before a failure occurs.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Outline the key steps and decision logic for implementing a SCADA-based emergency shutdown sequence in a chemical processing plant that triggers automatically when pressure sensors exceed critical thresholds or when gas leak detectors activate.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Describe the approach for creating a real-time quality control system that uses computer vision to detect microscopic surface defects on metal sheets moving along a high-speed roll-to-roll manufacturing line.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Detail the implementation strategy for a warehouse robotics network where autonomous mobile robots (AMRs) must dynamically re-route around obstacles while maintaining a collision-free path in a dynamic logistics environment.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Explain the algorithmic logic for optimizing the timing and sequencing of pneumatic actuators in an automated assembly line to maximize throughput while minimizing air pressure consumption and mechanical stress.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Explain the logic and data flow required to build a SCADA-based real-time monitoring system for a continuous chemical reactor, detailing how to aggregate high-frequency sensor inputs, handle signal filtering for noise, and trigger automatic shutdown sequences when critical pressure thresholds are breached.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Outline the step-by-step approach to designing a predictive maintenance algorithm for CNC machine tools using historical spindle vibration and temperature logs, focusing on the selection of time-series data structures and the reasoning behind choosing specific statistical thresholds to predict impending tool wear without generating actual code.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Describe the architectural strategy for implementing a decentralized robotics coordination system in an automated warehouse, where multiple AGVs must dynamically adjust their pathing algorithms to avoid collisions while optimizing a moving delivery schedule based on real-time order updates.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Provide a detailed explanation of the control logic needed to design a safety interlock system for an industrial press, covering the sequence of events for emergency stop activation, the verification of sensor inputs (light curtains and proximity detectors), and the specific timing delays required to prevent accidental operator injury.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Explain the methodology for creating a digital twin simulation framework to model the thermal dynamics and fluid pressure distribution within a large-scale hydraulic transmission system, emphasizing the key mathematical relationships between pump flow rates, valve openings, and system efficiency losses.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Describe the logical steps and data flow architecture required to build a predictive maintenance system that analyzes oil viscosity and temperature sensor readings from a hydraulic press to predict seal failure before it occurs.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Explain the decision-making algorithm and input parameters needed to program a collaborative robot (cobot) to safely inspect and reject defective parts on an automated assembly line using computer vision.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Outline the logic and control sequence for a SCADA-based process engineering system that regulates pH levels and flow rates in a continuous chemical mixing tank to ensure product consistency.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Detail the approach for designing a safety interlock system that automatically cuts power to a CNC machining spindle if a worker enters the designated operational zone detected by laser scanners.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Describe the data aggregation and validation strategy to create a real-time supply chain dashboard that tracks shipment delays and inventory levels across multiple regional warehouses using IoT gateways.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Outline the logic and data flow required to build a real-time thermal monitoring dashboard for a steel rolling mill, focusing on how SCADA data streams are aggregated, visualized, and thresholded to trigger alerts for furnace overheating.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Explain the algorithmic approach for developing a collision avoidance system for an autonomous mobile robot in a cluttered warehouse, detailing how it processes LiDAR point cloud data to identify obstacles and calculate safe trajectories without writing executable code.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Describe the step-by-step reasoning needed to design a predictive maintenance framework for CNC lathes that uses historical vibration and spindle load data to forecast tool wear and suggest optimal replacement times.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Provide a detailed breakdown of the logic for implementing a pneumatic valve control sequence in an automated packaging line, including how to handle pressure regulation, timing delays, and failure recovery mechanisms.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Articulate the core principles and data structures required to build a supply chain optimization module that minimizes lead time variability for just-in-time deliveries in a complex assembly plant, considering factors like supplier reliability and logistics routing.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Explain the logical flow and data structures required to build a PLC-based interlock system that prevents a hydraulic press from operating when a safety door is open or an operator override button is pressed.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Outline the key steps and algorithmic approach for developing a predictive maintenance solution that analyzes CNC machining spindle vibration and temperature logs to forecast tool wear and prevent catastrophic failures.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Describe the architecture and processing pipeline needed to create a real-time quality control system that uses computer vision to detect surface defects on high-speed conveyor belts in a food packaging plant.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Detail the logic and communication protocols for implementing a SCADA monitoring system that tracks fluid levels and pressure in a chemical storage facility while managing automated valve actuation during emergency shutdown scenarios.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  },
+  {
+    "task": "Explain the control strategy and sensor fusion techniques required to program a mobile robot for autonomous navigation and collision avoidance in a dynamic warehouse environment with moving forklifts and uneven floor surfaces.",
+    "category": "coding",
+    "category_label": "Coding Explanation Tasks"
+  }
+]
