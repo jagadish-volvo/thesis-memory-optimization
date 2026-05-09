@@ -50,13 +50,14 @@ print(f"Plots  → {PLOTS_DIR}\n")
 
 # Single confidence threshold — pure confidence-based routing
 # No hardcoding per category — the confidence signal alone drives routing
-# 0.63 is the sweet spot based on observed logprob ranges:
+# 0.65 balances latency saving and Qwen3.5 family participation:
 #   TinyLlama on simple tasks:  0.85-1.00 → accepts immediately
 #   TinyLlama on complex tasks: 0.55-0.69 → escalates to Phi
 #   Phi on complex tasks:       0.60-0.70 → escalates to Mistral
-#   Mistral on complex tasks:   0.70-0.80 → accepts at threshold
-# Expected escalation rate: 35-50%
-CONFIDENCE_THRESHOLD = 0.63
+#   Mistral on easy complex:    0.70-0.80 → accepts at threshold
+#   Mistral on hard complex:    0.65-0.69 → escalates to Qwen3.5 family
+# Expected escalation rate: 70-78%
+CONFIDENCE_THRESHOLD = 0.65
 
 # Cascade order — small to large (all local, no cloud dependency)
 CASCADE_MODELS = [

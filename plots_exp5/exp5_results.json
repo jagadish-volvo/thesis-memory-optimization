@@ -1,0 +1,4854 @@
+{
+  "config": {
+    "confidence_threshold": 0.68,
+    "routing": "pure_confidence_based_no_hardcoding",
+    "total_tasks": 200,
+    "cascade_models": [
+      "tinyllama:1.1b",
+      "phi:latest",
+      "mistral:latest",
+      "qwen3.5:0.8b",
+      "qwen3.5:2b",
+      "qwen3.5:4b",
+      "qwen3.5:9b"
+    ]
+  },
+  "baseline": {
+    "avg_quality": 0.998,
+    "avg_latency": 65.794,
+    "avg_tokens": 157.18
+  },
+  "adaptevolve": {
+    "avg_quality": 0.995,
+    "avg_latency": 70.698,
+    "avg_tokens": 161.65,
+    "avg_escalations": 2.07,
+    "escalation_rate": 92.0,
+    "model_usage": {
+      "mistral:latest": 160,
+      "tinyllama:1.1b": 16,
+      "qwen3.5:4b": 11,
+      "qwen3.5:9b": 5,
+      "phi:latest": 8
+    }
+  },
+  "per_task": {
+    "baseline": [
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in an automated production line?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7897,
+        "latency": 82.34,
+        "tokens": 146
+      },
+      {
+        "task": "Which type of sensor is most commonly used to detect the presence of metal objects in a quality control station?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7598,
+        "latency": 58.15,
+        "tokens": 138
+      },
+      {
+        "task": "How does a SCADA system differ from a standard PLC in terms of its operational scope within a factory?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7876,
+        "latency": 80.01,
+        "tokens": 159
+      },
+      {
+        "task": "What is the main purpose of a pneumatic cylinder in a robotic welding cell?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6916,
+        "latency": 66.8,
+        "tokens": 143
+      },
+      {
+        "task": "What role does a Manufacturing Execution System (MES) play in connecting shop floor data to enterprise resource planning software?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7597,
+        "latency": 68.62,
+        "tokens": 174
+      },
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in a discrete manufacturing environment?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7684,
+        "latency": 68.83,
+        "tokens": 165
+      },
+      {
+        "task": "Which safety system is specifically designed to detect and prevent personnel from entering hazardous zones around rotating machinery?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7042,
+        "latency": 47.1,
+        "tokens": 118
+      },
+      {
+        "task": "How does a Frequency Inverter (VFD) control the speed of an electric motor in an industrial drive system?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7815,
+        "latency": 71.36,
+        "tokens": 172
+      },
+      {
+        "task": "What is the main purpose of a Machine Tool Monitoring System in a CNC machining center?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7295,
+        "latency": 61.42,
+        "tokens": 154
+      },
+      {
+        "task": "Which pneumatic component is typically used to convert compressed air energy into rotational motion?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7491,
+        "latency": 54.02,
+        "tokens": 100
+      },
+      {
+        "task": "What is the primary function of a SCADA system in a water treatment plant?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7927,
+        "latency": 80.31,
+        "tokens": 151
+      },
+      {
+        "task": "In CNC machining, what is the purpose of the G-code command G01?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7618,
+        "latency": 57.93,
+        "tokens": 145
+      },
+      {
+        "task": "How does a pneumatic cylinder convert compressed air into linear motion in an automation cell?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7581,
+        "latency": 67.7,
+        "tokens": 173
+      },
+      {
+        "task": "What is the main difference between Statistical Process Control (SPC) and traditional inspection methods?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7796,
+        "latency": 64.99,
+        "tokens": 154
+      },
+      {
+        "task": "What safety protocol is typically required when performing maintenance on a machine guarded by an e-stop button?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7183,
+        "latency": 59.94,
+        "tokens": 169
+      },
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in modern manufacturing automation systems?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7871,
+        "latency": 64.41,
+        "tokens": 154
+      },
+      {
+        "task": "In a CNC machining environment, what is the specific role of the G-code and M-code within the program structure?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8069,
+        "latency": 65.81,
+        "tokens": 134
+      },
+      {
+        "task": "How does a 4-20mA current loop typically transmit analog sensor data over long industrial distances compared to voltage signals?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7554,
+        "latency": 65.12,
+        "tokens": 177
+      },
+      {
+        "task": "What is the fundamental difference between a solenoid valve's direct-on-line operation and its pilot-operated control method?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7136,
+        "latency": 64.7,
+        "tokens": 157
+      },
+      {
+        "task": "Which safety standard specifically outlines the requirements for protective equipment and hazardous area classification in industrial settings?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8223,
+        "latency": 64.43,
+        "tokens": 128
+      },
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in an industrial automation system?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7825,
+        "latency": 38.32,
+        "tokens": 86
+      },
+      {
+        "task": "How does a SCADA system differ from a standard PLC regarding data monitoring and control capabilities?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7581,
+        "latency": 64.54,
+        "tokens": 162
+      },
+      {
+        "task": "What is the specific purpose of a pneumatic proportional valve in fluid power control applications?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7128,
+        "latency": 50.52,
+        "tokens": 119
+      },
+      {
+        "task": "Which safety standard specifically addresses the design of machinery to prevent accidents involving hazardous energy?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7121,
+        "latency": 66.5,
+        "tokens": 160
+      },
+      {
+        "task": "What is the main role of a Material Requirement Planning (MRP) system in supply chain management?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8079,
+        "latency": 47.63,
+        "tokens": 117
+      },
+      {
+        "task": "Explain the sequence of actions a pneumatic safety interlock system performs when a robot cell door is opened during an automated assembly line, specifically detailing how it cuts power to the actuators and engages the emergency stop circuit.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6111,
+        "latency": 66.73,
+        "tokens": 186
+      },
+      {
+        "task": "Describe the process engineering steps required to optimize the flow rate and temperature distribution in a large-scale polymer extruder to prevent material degradation while maintaining consistent wall thickness.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7425,
+        "latency": 66.15,
+        "tokens": 169
+      },
+      {
+        "task": "Outline the troubleshooting procedure for a CNC machine experiencing intermittent tool chatter, including how to analyze spindle vibration data, check tool wear, and adjust feed rates or coolant pressure to resolve the issue.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7234,
+        "latency": 65.42,
+        "tokens": 165
+      },
+      {
+        "task": "Compare the operational advantages and limitations of using a SCADA system versus a direct PLC-based monitoring approach for managing real-time data in a pharmaceutical manufacturing environment regarding batch traceability.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7519,
+        "latency": 65.13,
+        "tokens": 168
+      },
+      {
+        "task": "Detail the cause-and-effect relationship between poor hydraulic filtration maintenance and the accelerated failure of variable displacement pumps in a heavy-duty manufacturing press, focusing on valve sticking and system pressure instability.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7243,
+        "latency": 65.72,
+        "tokens": 168
+      },
+      {
+        "task": "In a CNC machining cell, explain the specific role of tool length compensation and how it differs from diameter compensation when programming a tool path for a variable-height pocket, including the sequence of operations required to avoid collisions.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7199,
+        "latency": 65.81,
+        "tokens": 168
+      },
+      {
+        "task": "Compare the operational reliability and maintenance frequency of PLC-based logic control versus a modern Industrial IoT (IIoT) cloud-based control system for a remote pump station, focusing on latency and the implications for real-time shutdowns.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7712,
+        "latency": 66.85,
+        "tokens": 143
+      },
+      {
+        "task": "Describe the cause-and-effect relationship between fluid viscosity changes in a hydraulic cylinder due to temperature fluctuations and the resulting impact on actuator speed and power consumption in a heavy lifting crane.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8529,
+        "latency": 67.7,
+        "tokens": 146
+      },
+      {
+        "task": "Outline the critical safety interlock mechanisms required in a welding robot cell to prevent arc flash and mechanical entanglement, detailing how emergency stop buttons and light curtains interact with the main controller to de-energize the system.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6465,
+        "latency": 66.51,
+        "tokens": 168
+      },
+      {
+        "task": "Explain the process of statistical process control (SPC) using a control chart to detect a shift in mean production output on an automated assembly line, and describe the corrective actions a technician should take when a \"runaway\" condition is identified.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8045,
+        "latency": 68.66,
+        "tokens": 149
+      },
+      {
+        "task": "Explain the operational sequence and safety interlocks required when operating a hydraulic press in a metal stamping line, specifically detailing how the system prevents accidental activation if a worker's hand enters the dead zone.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6813,
+        "latency": 68.91,
+        "tokens": 168
+      },
+      {
+        "task": "Describe the logic behind a SCADA system's alarm hierarchy that distinguishes between a \"warning\" for a minor pressure fluctuation and a \"critical\" alert that triggers an automatic shutdown in a chemical mixing process.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.769,
+        "latency": 66.54,
+        "tokens": 160
+      },
+      {
+        "task": "Analyze the cause-and-effect relationship between excessive vibration in a CNC milling machine and the resulting surface finish quality, and propose two specific procedural changes to the toolpath or machine parameters to mitigate this issue.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7629,
+        "latency": 66.92,
+        "tokens": 161
+      },
+      {
+        "task": "Compare the maintenance strategies of a predictive maintenance system based on industrial IoT sensors versus a traditional reactive maintenance approach for rotating equipment like pumps and compressors in a petrochemical plant.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8012,
+        "latency": 66.15,
+        "tokens": 159
+      },
+      {
+        "task": "Outline the step-by-step procedure for calibrating a laser welder's focus and power settings to ensure consistent penetration depth in a high-speed automotive assembly line, emphasizing the importance of repeatability in the welding parameters.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6827,
+        "latency": 67.07,
+        "tokens": 159
+      },
+      {
+        "task": "In a high-speed CNC machining center, explain the specific sequence of events that occurs when the controller detects a tool collision, detailing how the emergency stop signal is propagated through the electrical system to cut power to the servos and engage the mechanical brake.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6358,
+        "latency": 66.53,
+        "tokens": 151
+      },
+      {
+        "task": "Describe the operational difference between a standard pressure-relief valve and a back-pressure regulator used in a pneumatic conveying system, and explain why a back-pressure regulator is essential for maintaining consistent material flow rates in long-distance pipelines.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7179,
+        "latency": 68.26,
+        "tokens": 157
+      },
+      {
+        "task": "Outline the root-cause analysis steps required to diagnose a recurring intermittent alarm in a SCADA system for a water treatment plant, specifically focusing on differentiating between a faulty field device, a communication protocol error, and a misconfigured logic point in the central database.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.697,
+        "latency": 66.85,
+        "tokens": 167
+      },
+      {
+        "task": "Explain the cause-and-effect relationship between thermal expansion in a large-scale hydraulic press and the resulting dimensional inaccuracies in the final product, and describe how a closed-loop feedback sensor system compensates for this mechanical shift during operation.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7269,
+        "latency": 67.09,
+        "tokens": 175
+      },
+      {
+        "task": "Discuss the challenges of implementing a predictive maintenance strategy for a batch reactor using industrial IoT sensors, including how to handle varying process conditions between different production batches to ensure the maintenance algorithms generate accurate failure predictions.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7181,
+        "latency": 65.85,
+        "tokens": 184
+      },
+      {
+        "task": "Compare the operational principles of a SCADA system and an MES system in a modern textile mill, specifically explaining how data flows from field devices like pressure sensors to the central database in each architecture and the typical end-user applications for that data.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7742,
+        "latency": 66.51,
+        "tokens": 150
+      },
+      {
+        "task": "Describe the step-by-step procedure for performing a vibration analysis on a high-speed CNC spindle to diagnose early-stage bearing failure, including how to interpret the specific frequency signatures that distinguish mechanical faults from normal operational noise.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6747,
+        "latency": 65.94,
+        "tokens": 162
+      },
+      {
+        "task": "Explain the cause-and-effect relationship between air pressure fluctuations in a pneumatic conveying system and the risk of material segregation, detailing how adjusting the feeder valve timing can stabilize the flow rate in a food processing facility.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6691,
+        "latency": 66.74,
+        "tokens": 188
+      },
+      {
+        "task": "Outline the safety protocols and engineering controls required to manage high-voltage electrical isolation during a maintenance shutdown of an automated assembly line, emphasizing the difference between \"dead front\" and \"dead zone\" configurations in electrical switchgear.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7384,
+        "latency": 66.07,
+        "tokens": 158
+      },
+      {
+        "task": "Analyze the impact of changing a batch size in a continuous fermentation process on the overall system stability, discussing how the controller must adjust feed rates and agitation speed to prevent bacterial contamination while maintaining consistent product yield.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.805,
+        "latency": 66.18,
+        "tokens": 151
+      },
+      {
+        "task": "Develop a comprehensive diagnostic procedure for a recurring overheating fault in the hydraulic cooling system of a multi-axis robotic welding cell, detailing the steps for isolating the radiator bypass valve, checking oil viscosity versus ambient temperature correlations, verifying the pump flow rate against thermal load calculations, and recalibrating the temperature controller PID parameters.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7474,
+        "latency": 68.76,
+        "tokens": 175
+      },
+      {
+        "task": "Design a fail-safe logic sequence for an automated conveyor belt sorting system that integrates pressure sensors at multiple intervals and a central SCADA interface, ensuring the system safely stops and engages emergency brakes if an object larger than the defined threshold is detected while maintaining data logging of the event for root cause analysis.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7314,
+        "latency": 67.49,
+        "tokens": 145
+      },
+      {
+        "task": "Create a detailed validation protocol for introducing a new granular additive into a continuous chemical mixing process, covering the initial batch size determination, the calculation of heat dissipation rates for the mixer impellers, the simulation of viscosity changes over time, and the establishment of quality control checkpoints for pH and concentration before full-scale production.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7186,
+        "latency": 68.11,
+        "tokens": 160
+      },
+      {
+        "task": "Formulate a strategic maintenance schedule for a large industrial air compressor network that includes predictive analysis of motor vibration patterns, rotation of oil filters based on particulate count thresholds, inspection of the aftercooler for condensation buildup, and optimization of the cycle timing to reduce overall energy consumption without compromising output pressure stability.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7605,
+        "latency": 67.24,
+        "tokens": 157
+      },
+      {
+        "task": "Engineer a software integration plan to connect legacy barcode scanners with a modern ERP system for inventory tracking in a pharmaceutical manufacturing line, addressing the necessary data mapping, error handling protocols for unreadable codes, the design of a real-time alert system for stock discrepancies, and the security measures required to protect sensitive patient data during the synchronization process.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7185,
+        "latency": 68.7,
+        "tokens": 158
+      },
+      {
+        "task": "Diagnose a recurring thermal runaway event in a high-pressure hydraulic cooling loop of a petrochemical reactor by correlating sensor logs, valve actuation sequences, and fluid viscosity data to identify the specific component failure requiring immediate isolation and repair.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7162,
+        "latency": 68.94,
+        "tokens": 166
+      },
+      {
+        "task": "Develop a comprehensive software integration protocol for a new SCADA system that must synchronize real-time data from 50 distributed PLCs across three separate factory floors while ensuring sub-200ms latency and maintaining historical data integrity for regulatory compliance audits.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7219,
+        "latency": 68.64,
+        "tokens": 133
+      },
+      {
+        "task": "Design a multi-stage validation procedure for a new industrial robotic cell performing automated weld seam verification on large-scale steel girders, including steps for collision avoidance logic programming, thermal stress simulation, and operator safety interlock testing.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6746,
+        "latency": 68.8,
+        "tokens": 166
+      },
+      {
+        "task": "Create a detailed corrective action plan to reduce operator error rates in a pneumatic assembly line by redesigning the human-machine interface (HMI) and implementing a new feedback mechanism that provides real-time quality alerts directly to the control panel of each station.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7367,
+        "latency": 71.4,
+        "tokens": 156
+      },
+      {
+        "task": "Evaluate the lifecycle efficiency of a modular conveyor belt system in a food processing facility by calculating energy consumption per unit, waste heat recovery potential, and material throughput capacity, then propose an optimization strategy to reduce operational costs by 15% over the next fiscal year.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.718,
+        "latency": 67.84,
+        "tokens": 142
+      },
+      {
+        "task": "Develop a comprehensive safety interlock and emergency stop logic sequence for a multi-axis robotic welding cell, ensuring compliance with ISO 13849-1 standards, by mapping sensor inputs to PLC outputs, defining fail-safe states, and validating response times against hazardous zones.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6525,
+        "latency": 67.04,
+        "tokens": 147
+      },
+      {
+        "task": "Design a closed-loop thermal management and fluid filtration protocol for a large-scale hydraulic press system used in aerospace forging, including steps for oil degradation monitoring, pump pressure regulation, and contamination removal scheduling.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7268,
+        "latency": 66.49,
+        "tokens": 157
+      },
+      {
+        "task": "Create a detailed root cause analysis and corrective action procedure for a recurring vibration anomaly in a centrifugal compressor unit, requiring diagnostic tool calibration, spectral analysis interpretation, bearing wear assessment, and mechanical alignment correction.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6885,
+        "latency": 66.59,
+        "tokens": 166
+      },
+      {
+        "task": "Outline a step-by-step validation and risk assessment process for introducing a new programmable logic controller (PLC) into an existing SCADA network, covering hardware compatibility testing, network latency optimization, cybersecurity penetration simulation, and data integrity verification.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.707,
+        "latency": 67.23,
+        "tokens": 176
+      },
+      {
+        "task": "Formulate a preventive maintenance and condition-based monitoring strategy for a continuous glass bottle filling line, integrating sensor data analysis for capping torque consistency, conveyor belt wear prediction, and automated lubrication cycle adjustment.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6909,
+        "latency": 65.89,
+        "tokens": 172
+      },
+      {
+        "task": "Design a full-scale preventive maintenance schedule for a high-speed CNC milling machine used in automotive part manufacturing, including specific intervals for lubrication, tool wear monitoring via vibration analysis, and ball-screw calibration checks.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6974,
+        "latency": 66.21,
+        "tokens": 153
+      },
+      {
+        "task": "Develop a fault diagnosis and isolation protocol for a hydraulic pressure loss in a multi-axis robotic welding cell, covering steps from sensor data correlation, valve isolation testing, fluid contamination analysis, and pump performance verification.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6798,
+        "latency": 66.28,
+        "tokens": 161
+      },
+      {
+        "task": "Create a detailed production validation plan for a new batch of aerospace turbine blades, involving statistical process control (SPC) charting, non-destructive testing results review, dimensional tolerance analysis, and final heat treatment certification.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7884,
+        "latency": 68.67,
+        "tokens": 146
+      },
+      {
+        "task": "Engineer a fail-safe logic sequence for a critical SCADA system controlling a chemical batching process, integrating redundant pressure sensors, automatic valve locking mechanisms, and emergency shutdown triggers for temperature spikes.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7155,
+        "latency": 65.85,
+        "tokens": 154
+      },
+      {
+        "task": "Design a comprehensive industrial IoT data architecture for a smart factory floor, specifying sensor types for predictive maintenance, network topology for low-latency control signals, cloud storage protocols for historical trend analysis, and real-time visualization dashboards.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7719,
+        "latency": 65.95,
+        "tokens": 165
+      },
+      {
+        "task": "Develop a comprehensive fault diagnosis and recovery protocol for a PLC-controlled automated packaging line where the vision inspection system falsely rejects green-colored bottles due to variable lighting conditions in the packaging bay.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6426,
+        "latency": 65.77,
+        "tokens": 173
+      },
+      {
+        "task": "Design a redundant hydraulic circuit upgrade for a heavy-duty press in the aerospace sector to meet ISO 4413 safety standards while ensuring zero-pressure maintenance during production cycles.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6976,
+        "latency": 66.22,
+        "tokens": 151
+      },
+      {
+        "task": "Create a data integration strategy to map and synchronize real-time SCADA data from five disparate legacy machine controllers to a modern industrial IoT cloud platform for predictive vibration analysis.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.74,
+        "latency": 64.87,
+        "tokens": 170
+      },
+      {
+        "task": "Formulate a detailed quality control validation plan to verify the dimensional tolerances of turbine blades manufactured by a multi-axis CNC machining cluster using non-contact laser scanning and statistical process control.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.69,
+        "latency": 65.31,
+        "tokens": 161
+      },
+      {
+        "task": "Engineer a fail-safe emergency stop sequence and interlock logic for a robotic arc welding cell to prevent hazardous collisions between the robot arm and the automated overhead crane system.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6894,
+        "latency": 65.33,
+        "tokens": 159
+      },
+      {
+        "task": "Explain the logical flow and data structures required to build a predictive maintenance framework that correlates temperature trends and vibration frequencies from multiple CNC machines to forecast tool wear before a failure occurs.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.787,
+        "latency": 65.13,
+        "tokens": 136
+      },
+      {
+        "task": "Outline the key steps and decision logic for implementing a SCADA-based emergency shutdown sequence in a chemical processing plant that triggers automatically when pressure sensors exceed critical thresholds or when gas leak detectors activate.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7399,
+        "latency": 67.19,
+        "tokens": 143
+      },
+      {
+        "task": "Describe the approach for creating a real-time quality control system that uses computer vision to detect microscopic surface defects on metal sheets moving along a high-speed roll-to-roll manufacturing line.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7332,
+        "latency": 67.26,
+        "tokens": 157
+      },
+      {
+        "task": "Detail the implementation strategy for a warehouse robotics network where autonomous mobile robots (AMRs) must dynamically re-route around obstacles while maintaining a collision-free path in a dynamic logistics environment.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7292,
+        "latency": 66.67,
+        "tokens": 172
+      },
+      {
+        "task": "Explain the algorithmic logic for optimizing the timing and sequencing of pneumatic actuators in an automated assembly line to maximize throughput while minimizing air pressure consumption and mechanical stress.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7049,
+        "latency": 67.14,
+        "tokens": 150
+      },
+      {
+        "task": "Explain the logic and data flow required to build a SCADA-based real-time monitoring system for a continuous chemical reactor, detailing how to aggregate high-frequency sensor inputs, handle signal filtering for noise, and trigger automatic shutdown sequences when critical pressure thresholds are breached.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.777,
+        "latency": 67.1,
+        "tokens": 155
+      },
+      {
+        "task": "Outline the step-by-step approach to designing a predictive maintenance algorithm for CNC machine tools using historical spindle vibration and temperature logs, focusing on the selection of time-series data structures and the reasoning behind choosing specific statistical thresholds to predict impending tool wear without generating actual code.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7788,
+        "latency": 66.48,
+        "tokens": 146
+      },
+      {
+        "task": "Describe the architectural strategy for implementing a decentralized robotics coordination system in an automated warehouse, where multiple AGVs must dynamically adjust their pathing algorithms to avoid collisions while optimizing a moving delivery schedule based on real-time order updates.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7198,
+        "latency": 65.81,
+        "tokens": 172
+      },
+      {
+        "task": "Provide a detailed explanation of the control logic needed to design a safety interlock system for an industrial press, covering the sequence of events for emergency stop activation, the verification of sensor inputs (light curtains and proximity detectors), and the specific timing delays required to prevent accidental operator injury.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6468,
+        "latency": 66.97,
+        "tokens": 175
+      },
+      {
+        "task": "Explain the methodology for creating a digital twin simulation framework to model the thermal dynamics and fluid pressure distribution within a large-scale hydraulic transmission system, emphasizing the key mathematical relationships between pump flow rates, valve openings, and system efficiency losses.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7753,
+        "latency": 65.93,
+        "tokens": 153
+      },
+      {
+        "task": "Describe the logical steps and data flow architecture required to build a predictive maintenance system that analyzes oil viscosity and temperature sensor readings from a hydraulic press to predict seal failure before it occurs.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7766,
+        "latency": 67.23,
+        "tokens": 154
+      },
+      {
+        "task": "Explain the decision-making algorithm and input parameters needed to program a collaborative robot (cobot) to safely inspect and reject defective parts on an automated assembly line using computer vision.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7414,
+        "latency": 66.08,
+        "tokens": 153
+      },
+      {
+        "task": "Outline the logic and control sequence for a SCADA-based process engineering system that regulates pH levels and flow rates in a continuous chemical mixing tank to ensure product consistency.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7302,
+        "latency": 66.71,
+        "tokens": 151
+      },
+      {
+        "task": "Detail the approach for designing a safety interlock system that automatically cuts power to a CNC machining spindle if a worker enters the designated operational zone detected by laser scanners.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6996,
+        "latency": 67.52,
+        "tokens": 167
+      },
+      {
+        "task": "Describe the data aggregation and validation strategy to create a real-time supply chain dashboard that tracks shipment delays and inventory levels across multiple regional warehouses using IoT gateways.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7606,
+        "latency": 66.65,
+        "tokens": 154
+      },
+      {
+        "task": "Outline the logic and data flow required to build a real-time thermal monitoring dashboard for a steel rolling mill, focusing on how SCADA data streams are aggregated, visualized, and thresholded to trigger alerts for furnace overheating.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7482,
+        "latency": 68.25,
+        "tokens": 146
+      },
+      {
+        "task": "Explain the algorithmic approach for developing a collision avoidance system for an autonomous mobile robot in a cluttered warehouse, detailing how it processes LiDAR point cloud data to identify obstacles and calculate safe trajectories without writing executable code.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7696,
+        "latency": 66.59,
+        "tokens": 164
+      },
+      {
+        "task": "Describe the step-by-step reasoning needed to design a predictive maintenance framework for CNC lathes that uses historical vibration and spindle load data to forecast tool wear and suggest optimal replacement times.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7457,
+        "latency": 66.03,
+        "tokens": 158
+      },
+      {
+        "task": "Provide a detailed breakdown of the logic for implementing a pneumatic valve control sequence in an automated packaging line, including how to handle pressure regulation, timing delays, and failure recovery mechanisms.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7516,
+        "latency": 65.44,
+        "tokens": 157
+      },
+      {
+        "task": "Articulate the core principles and data structures required to build a supply chain optimization module that minimizes lead time variability for just-in-time deliveries in a complex assembly plant, considering factors like supplier reliability and logistics routing.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7474,
+        "latency": 67.18,
+        "tokens": 177
+      },
+      {
+        "task": "Explain the logical flow and data structures required to build a PLC-based interlock system that prevents a hydraulic press from operating when a safety door is open or an operator override button is pressed.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.774,
+        "latency": 67.33,
+        "tokens": 159
+      },
+      {
+        "task": "Outline the key steps and algorithmic approach for developing a predictive maintenance solution that analyzes CNC machining spindle vibration and temperature logs to forecast tool wear and prevent catastrophic failures.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7746,
+        "latency": 68.48,
+        "tokens": 149
+      },
+      {
+        "task": "Describe the architecture and processing pipeline needed to create a real-time quality control system that uses computer vision to detect surface defects on high-speed conveyor belts in a food packaging plant.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7017,
+        "latency": 88.32,
+        "tokens": 163
+      },
+      {
+        "task": "Detail the logic and communication protocols for implementing a SCADA monitoring system that tracks fluid levels and pressure in a chemical storage facility while managing automated valve actuation during emergency shutdown scenarios.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7243,
+        "latency": 66.53,
+        "tokens": 160
+      },
+      {
+        "task": "Explain the control strategy and sensor fusion techniques required to program a mobile robot for autonomous navigation and collision avoidance in a dynamic warehouse environment with moving forklifts and uneven floor surfaces.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7243,
+        "latency": 65.42,
+        "tokens": 153
+      },
+      {
+        "task": "What is the function of a pressure relief valve in a hydraulic system?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7559,
+        "latency": 63.58,
+        "tokens": 179
+      },
+      {
+        "task": "Define the term 'cycle time' in the context of an automated assembly line.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7489,
+        "latency": 63.95,
+        "tokens": 181
+      },
+      {
+        "task": "What does OEE stand for and what does it measure in manufacturing?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7903,
+        "latency": 50.64,
+        "tokens": 137
+      },
+      {
+        "task": "Explain the purpose of a watchdog timer in an embedded industrial control system.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7384,
+        "latency": 65.81,
+        "tokens": 174
+      },
+      {
+        "task": "What is the difference between a servo motor and a stepper motor in industrial automation?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8196,
+        "latency": 65.11,
+        "tokens": 159
+      },
+      {
+        "task": "Define 'dead band' in the context of a PID controller.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7797,
+        "latency": 63.57,
+        "tokens": 178
+      },
+      {
+        "task": "What is the role of a fieldbus protocol such as PROFIBUS in factory automation?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7174,
+        "latency": 64.28,
+        "tokens": 165
+      },
+      {
+        "task": "Explain what a P&ID diagram is and what information it contains.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7452,
+        "latency": 64.23,
+        "tokens": 154
+      },
+      {
+        "task": "What is the difference between preventive maintenance and corrective maintenance?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8157,
+        "latency": 63.85,
+        "tokens": 148
+      },
+      {
+        "task": "Define 'torque ripple' and explain why it matters in precision motor control.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6902,
+        "latency": 65.32,
+        "tokens": 172
+      },
+      {
+        "task": "What is a safety integrity level (SIL) and how is it used in industrial safety?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7988,
+        "latency": 65.84,
+        "tokens": 147
+      },
+      {
+        "task": "Explain what ANDON is in a lean manufacturing context.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6915,
+        "latency": 64.99,
+        "tokens": 188
+      },
+      {
+        "task": "What is the purpose of a flow meter in an industrial process control system?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7867,
+        "latency": 58.87,
+        "tokens": 148
+      },
+      {
+        "task": "Define 'jidoka' and explain its significance in Toyota Production System.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7689,
+        "latency": 67.32,
+        "tokens": 180
+      },
+      {
+        "task": "What is the difference between an encoder and a resolver in motion control?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7234,
+        "latency": 64.21,
+        "tokens": 172
+      },
+      {
+        "task": "Explain what a Poka-Yoke device is and give an industrial example.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7211,
+        "latency": 65.08,
+        "tokens": 177
+      },
+      {
+        "task": "What is the role of a distributed control system (DCS) in process industries?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.757,
+        "latency": 64.68,
+        "tokens": 162
+      },
+      {
+        "task": "Define 'mean time between failures' (MTBF) and explain how it is calculated.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7955,
+        "latency": 65.5,
+        "tokens": 166
+      },
+      {
+        "task": "What is the purpose of a check valve in a pneumatic circuit?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6805,
+        "latency": 44.36,
+        "tokens": 119
+      },
+      {
+        "task": "Explain what a Kanban system is and how it controls inventory in manufacturing.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7457,
+        "latency": 63.87,
+        "tokens": 178
+      },
+      {
+        "task": "What is the difference between open-loop and closed-loop control in industrial systems?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8255,
+        "latency": 65.03,
+        "tokens": 162
+      },
+      {
+        "task": "Define 'backlash' in mechanical systems and explain its effect on positioning accuracy.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7099,
+        "latency": 64.12,
+        "tokens": 187
+      },
+      {
+        "task": "What is a safe torque off (STO) function in variable frequency drives?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6658,
+        "latency": 65.85,
+        "tokens": 162
+      },
+      {
+        "task": "Explain what a programmable safety controller (PSC) does in a safety system.",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.719,
+        "latency": 64.95,
+        "tokens": 163
+      },
+      {
+        "task": "What is the purpose of an industrial Ethernet switch in a factory network?",
+        "category": "simple",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7323,
+        "latency": 63.51,
+        "tokens": 163
+      },
+      {
+        "task": "Explain how a proportional-integral-derivative (PID) controller works and describe the effect of each tuning parameter on system response.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8939,
+        "latency": 65.23,
+        "tokens": 128
+      },
+      {
+        "task": "Describe the working principle of a variable frequency drive (VFD) and explain how it reduces energy consumption in pump applications.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8393,
+        "latency": 65.87,
+        "tokens": 174
+      },
+      {
+        "task": "Compare the advantages and disadvantages of pneumatic versus electric actuation systems in high-speed assembly applications.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7215,
+        "latency": 66.29,
+        "tokens": 169
+      },
+      {
+        "task": "Explain how condition monitoring using vibration analysis can detect early bearing failure in rotating machinery.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7361,
+        "latency": 64.39,
+        "tokens": 170
+      },
+      {
+        "task": "Describe the key differences between OPC-UA and MQTT protocols and explain which is more suitable for industrial IoT applications.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7392,
+        "latency": 65.82,
+        "tokens": 151
+      },
+      {
+        "task": "Explain how a digital twin differs from a simulation model and describe the key data requirements for building an accurate digital twin.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7871,
+        "latency": 64.49,
+        "tokens": 164
+      },
+      {
+        "task": "Describe the steps involved in commissioning a new industrial robot in a manufacturing cell, including safety validation.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7104,
+        "latency": 64.68,
+        "tokens": 164
+      },
+      {
+        "task": "Explain what edge computing means in an industrial context and describe its advantages over cloud-only architectures for real-time control.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7764,
+        "latency": 68.28,
+        "tokens": 164
+      },
+      {
+        "task": "Describe how statistical process control (SPC) charts are used to monitor and maintain product quality in a continuous manufacturing process.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7647,
+        "latency": 66.49,
+        "tokens": 170
+      },
+      {
+        "task": "Explain the difference between functional safety and cybersecurity in industrial control systems and describe why both are required.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7622,
+        "latency": 66.14,
+        "tokens": 144
+      },
+      {
+        "task": "Describe how a SCADA system collects, processes, and displays data from field devices in a water treatment facility.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7737,
+        "latency": 64.42,
+        "tokens": 155
+      },
+      {
+        "task": "Explain what machine vision is in industrial quality control and describe how it detects surface defects on high-speed production lines.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7217,
+        "latency": 64.82,
+        "tokens": 176
+      },
+      {
+        "task": "Describe the role of IEC 61508 in industrial safety system design and explain its key requirements for hardware and software.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7314,
+        "latency": 65.71,
+        "tokens": 167
+      },
+      {
+        "task": "Explain how torque control differs from speed control in servo drive applications and describe when each mode is appropriate.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.718,
+        "latency": 64.34,
+        "tokens": 171
+      },
+      {
+        "task": "Describe the working principle of an inductive proximity sensor and explain its advantages over mechanical limit switches in harsh environments.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7803,
+        "latency": 64.37,
+        "tokens": 166
+      },
+      {
+        "task": "Explain how a motion profile (trapezoidal or S-curve) improves positioning accuracy and reduces mechanical stress in servo systems.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7476,
+        "latency": 65.25,
+        "tokens": 160
+      },
+      {
+        "task": "Describe the key steps in conducting a Failure Mode and Effects Analysis (FMEA) for a new automated welding system.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7611,
+        "latency": 66.47,
+        "tokens": 158
+      },
+      {
+        "task": "Explain how a heat exchanger works in an industrial cooling system and describe the factors that determine its thermal efficiency.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8007,
+        "latency": 64.91,
+        "tokens": 176
+      },
+      {
+        "task": "Describe what protocol conversion means in industrial automation and explain why it is needed when integrating legacy equipment.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7133,
+        "latency": 65.47,
+        "tokens": 168
+      },
+      {
+        "task": "Explain the concept of redundancy in safety-critical industrial systems and describe the difference between hot standby and cold standby configurations.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7678,
+        "latency": 65.55,
+        "tokens": 158
+      },
+      {
+        "task": "Describe how a collaborative robot (cobot) differs from a traditional industrial robot and explain the key safety considerations for human-robot collaboration.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7026,
+        "latency": 67.18,
+        "tokens": 177
+      },
+      {
+        "task": "Explain how compressed air quality affects pneumatic actuator performance and describe the filtration and drying requirements for different applications.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7293,
+        "latency": 66.35,
+        "tokens": 148
+      },
+      {
+        "task": "Describe the purpose of a manufacturing execution system (MES) and explain how it connects ERP systems to shop floor equipment.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7493,
+        "latency": 65.07,
+        "tokens": 180
+      },
+      {
+        "task": "Explain what predictive quality means in smart manufacturing and describe how sensor data is used to predict product defects before they occur.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7514,
+        "latency": 64.85,
+        "tokens": 183
+      },
+      {
+        "task": "Describe the key differences between ISO 13849 and IEC 62061 safety standards and explain which applies to machinery safety systems.",
+        "category": "medium",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6917,
+        "latency": 65.57,
+        "tokens": 139
+      },
+      {
+        "task": "Design a comprehensive energy management strategy for a large automotive stamping plant that integrates demand response, peak shaving, and waste heat recovery to reduce total energy costs by 20% over two years.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7763,
+        "latency": 68.46,
+        "tokens": 151
+      },
+      {
+        "task": "Develop a multi-layer cybersecurity architecture for an oil refinery SCADA network that segments operational technology from IT systems while maintaining real-time data visibility for remote monitoring.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7003,
+        "latency": 64.8,
+        "tokens": 148
+      },
+      {
+        "task": "Create a detailed validation and qualification plan for a new pharmaceutical filling line, covering equipment qualification (IQ/OQ/PQ), process validation, and regulatory compliance with FDA 21 CFR Part 11.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7739,
+        "latency": 66.07,
+        "tokens": 150
+      },
+      {
+        "task": "Design a predictive maintenance framework for a fleet of 50 CNC machining centers that integrates vibration, thermal, and acoustic sensors with a machine learning model to predict tool failures 24 hours in advance.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.758,
+        "latency": 67.22,
+        "tokens": 151
+      },
+      {
+        "task": "Develop a comprehensive functional safety plan for a new automated guided vehicle (AGV) fleet operating in a mixed human-robot warehouse, covering hazard analysis, SIL assessment, and safety architecture design.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7564,
+        "latency": 65.87,
+        "tokens": 145
+      },
+      {
+        "task": "Design a digital twin architecture for a continuous casting process in a steel mill that models solidification dynamics, thermal stress, and surface quality in real-time to optimize casting speed and reduce defect rates.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7374,
+        "latency": 65.41,
+        "tokens": 158
+      },
+      {
+        "task": "Create a detailed root cause analysis and corrective action plan for a recurring hydraulic seal failure in a heavy press line, covering tribological analysis, operating condition review, and material selection recommendations.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6568,
+        "latency": 65.39,
+        "tokens": 168
+      },
+      {
+        "task": "Develop a comprehensive OEE improvement roadmap for a beverage bottling plant that identifies the top five loss categories, proposes technical solutions for each, and defines KPIs to track progress over 12 months.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6865,
+        "latency": 66.2,
+        "tokens": 149
+      },
+      {
+        "task": "Design an industrial IoT platform architecture for a multi-site food processing company that aggregates sensor data from 200 machines across five plants into a unified real-time dashboard with anomaly detection.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7438,
+        "latency": 65.54,
+        "tokens": 150
+      },
+      {
+        "task": "Create a detailed risk assessment and mitigation plan for introducing a collaborative robot to a manual assembly station where workers perform precision insertion tasks with fragile electronic components.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.75,
+        "latency": 66.7,
+        "tokens": 149
+      },
+      {
+        "task": "Develop a comprehensive change management procedure for upgrading the firmware of 30 PLCs controlling a continuous chemical production line without interrupting production or compromising process safety.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7114,
+        "latency": 65.58,
+        "tokens": 160
+      },
+      {
+        "task": "Design a closed-loop quality control system for a high-speed injection molding process that uses in-mold pressure sensors and cavity temperature data to automatically adjust process parameters and reject defective parts.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7416,
+        "latency": 66.2,
+        "tokens": 154
+      },
+      {
+        "task": "Create a detailed commissioning and acceptance testing procedure for a new 10 MW solar-plus-storage microgrid powering an industrial campus, covering grid-forming control, islanding detection, and protection coordination.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7388,
+        "latency": 66.72,
+        "tokens": 147
+      },
+      {
+        "task": "Develop a supply chain resilience strategy for a tier-one automotive parts manufacturer that identifies single-source dependencies, proposes dual-sourcing plans, and defines buffer stock levels for critical components.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7047,
+        "latency": 65.36,
+        "tokens": 163
+      },
+      {
+        "task": "Design a comprehensive asset lifecycle management plan for a fleet of 100 industrial compressors in a gas processing facility, covering condition monitoring, planned replacement scheduling, and spare parts optimization.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7703,
+        "latency": 66.44,
+        "tokens": 157
+      },
+      {
+        "task": "Create a detailed process hazard analysis (PHA) for a new exothermic batch reactor in a specialty chemicals plant, covering runaway reaction scenarios, relief valve sizing, and emergency response procedures.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7034,
+        "latency": 67.34,
+        "tokens": 146
+      },
+      {
+        "task": "Develop a multi-site manufacturing network optimization plan for a consumer electronics company that balances production capacity, logistics costs, and lead times across factories in three countries.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 0.6,
+        "confidence": 0.7389,
+        "latency": 66.62,
+        "tokens": 170
+      },
+      {
+        "task": "Design a comprehensive water treatment and recycling system for a semiconductor fabrication facility that minimizes ultrapure water consumption and meets wastewater discharge regulations.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7046,
+        "latency": 67.2,
+        "tokens": 137
+      },
+      {
+        "task": "Create a detailed production scheduling optimization strategy for a mixed-model automotive assembly line that minimizes changeover time, balances workstation utilization, and meets daily customer delivery targets.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6842,
+        "latency": 68.89,
+        "tokens": 161
+      },
+      {
+        "task": "Develop a comprehensive alarm management improvement plan for a petrochemical control room that reduces nuisance alarms by 60%, implements alarm prioritization, and trains operators on revised response procedures.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6259,
+        "latency": 65.83,
+        "tokens": 145
+      },
+      {
+        "task": "Design a real-time quality monitoring system for a continuous paper manufacturing process that integrates basis weight, moisture, and caliper sensors to automatically adjust forming and pressing parameters.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7175,
+        "latency": 67.11,
+        "tokens": 168
+      },
+      {
+        "task": "Create a detailed technology roadmap for implementing Industry 4.0 capabilities in a traditional machined parts factory over five years, covering connectivity infrastructure, data analytics, and workforce upskilling.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7393,
+        "latency": 65.87,
+        "tokens": 154
+      },
+      {
+        "task": "Develop a comprehensive emission monitoring and reduction plan for a cement kiln that integrates continuous emissions monitoring systems (CEMS) with combustion optimization algorithms to meet NOx and SOx limits.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7288,
+        "latency": 65.49,
+        "tokens": 160
+      },
+      {
+        "task": "Design a fault-tolerant control architecture for a critical pumping station in a water distribution network that maintains flow continuity during single-point failures of sensors, controllers, or actuators.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7257,
+        "latency": 65.58,
+        "tokens": 141
+      },
+      {
+        "task": "Create a detailed qualification and revalidation strategy for a sterile manufacturing cleanroom HVAC system, covering differential pressure mapping, particle count verification, and microbial monitoring protocols.",
+        "category": "complex",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.718,
+        "latency": 65.7,
+        "tokens": 139
+      },
+      {
+        "task": "Describe the logical approach for implementing a real-time anomaly detection system for industrial sensor streams using a sliding window statistical model to flag deviations beyond three standard deviations.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7713,
+        "latency": 64.82,
+        "tokens": 163
+      },
+      {
+        "task": "Explain the data pipeline architecture and processing steps needed to build a digital twin that mirrors the state of a physical conveyor system using OPC-UA data feeds.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6749,
+        "latency": 64.66,
+        "tokens": 157
+      },
+      {
+        "task": "Outline the algorithm design and key data structures required to implement an automated shift scheduling system for a 24-hour manufacturing plant with variable skill requirements across workstations.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7642,
+        "latency": 67.01,
+        "tokens": 141
+      },
+      {
+        "task": "Describe the system architecture and integration approach for connecting a legacy PLC-based production line to a modern cloud analytics platform using an edge gateway and MQTT protocol.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7802,
+        "latency": 65.89,
+        "tokens": 153
+      },
+      {
+        "task": "Explain the reasoning and data structures needed to implement a just-in-time material replenishment system that triggers purchase orders based on real-time consumption rates and supplier lead times.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7777,
+        "latency": 64.95,
+        "tokens": 173
+      },
+      {
+        "task": "Describe the approach for designing a multi-threaded data acquisition system that simultaneously reads from 100 industrial sensors at different sampling rates without data loss or synchronization errors.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6935,
+        "latency": 65.48,
+        "tokens": 166
+      },
+      {
+        "task": "Outline the logic and control flow for implementing an automated tool change sequence in a CNC machining center that verifies tool presence, measures tool length offset, and updates the CNC program accordingly.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6783,
+        "latency": 65.57,
+        "tokens": 171
+      },
+      {
+        "task": "Explain the algorithm design and decision logic for a dynamic routing system in a warehouse AMR fleet that minimizes travel distance while avoiding conflicts between multiple robots operating simultaneously.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7139,
+        "latency": 66.35,
+        "tokens": 155
+      },
+      {
+        "task": "Describe the architecture and key processing stages of a real-time energy monitoring system that tracks consumption per machine, detects idle waste, and generates automated alerts for energy anomalies.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8028,
+        "latency": 64.89,
+        "tokens": 146
+      },
+      {
+        "task": "Outline the data model and processing logic required to implement a traceability system for automotive components that records every manufacturing step, operator, and machine involved from raw material to finished part.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7242,
+        "latency": 66.97,
+        "tokens": 156
+      },
+      {
+        "task": "Explain the algorithmic approach for implementing a model predictive control (MPC) system for a batch chemical reactor that optimizes temperature and feed rate profiles to maximize yield while respecting safety constraints.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.8248,
+        "latency": 86.7,
+        "tokens": 128
+      },
+      {
+        "task": "Describe the system design and communication protocol stack required to implement a wireless sensor network for structural health monitoring of a large industrial building using LoRaWAN.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.743,
+        "latency": 70.15,
+        "tokens": 134
+      },
+      {
+        "task": "Outline the reasoning and key components needed to build a computer vision pipeline that detects and classifies weld defects in real-time on a robotic welding production line.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7134,
+        "latency": 65.55,
+        "tokens": 169
+      },
+      {
+        "task": "Explain the logical flow and data structures required to implement an automated production reporting system that aggregates shift data from multiple PLCs and generates KPI dashboards for plant management.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7051,
+        "latency": 65.54,
+        "tokens": 149
+      },
+      {
+        "task": "Describe the approach for designing a simulation framework to test and validate PLC ladder logic programs for a safety-critical conveyor system before deployment on the production line.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7444,
+        "latency": 66.64,
+        "tokens": 152
+      },
+      {
+        "task": "Outline the algorithm and sensor fusion strategy for implementing a force-torque controlled assembly process where a robot must insert a connector with a defined insertion force profile.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7418,
+        "latency": 64.92,
+        "tokens": 142
+      },
+      {
+        "task": "Explain the architecture and data flow of a manufacturing analytics platform that correlates machine downtime events with upstream process parameters to identify root causes of recurring failures.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7344,
+        "latency": 64.79,
+        "tokens": 161
+      },
+      {
+        "task": "Describe the logical steps and data structures needed to implement an automated calibration management system that tracks calibration due dates, generates work orders, and records results for audit compliance.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7788,
+        "latency": 64.96,
+        "tokens": 132
+      },
+      {
+        "task": "Outline the approach for building a reinforcement learning environment that trains an agent to optimize furnace temperature setpoints in a heat treatment process to minimize energy use while meeting metallurgical specifications.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.75,
+        "latency": 65.02,
+        "tokens": 136
+      },
+      {
+        "task": "Explain the system architecture and key algorithms needed to implement a real-time tool wear monitoring system for a milling machine using acoustic emission signals and frequency domain analysis.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7478,
+        "latency": 65.47,
+        "tokens": 153
+      },
+      {
+        "task": "Describe the reasoning and control logic for implementing an automated leak detection system in a compressed air network that uses flow balance calculations and pressure decay analysis to localize leak sources.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7339,
+        "latency": 67.38,
+        "tokens": 151
+      },
+      {
+        "task": "Outline the data architecture and processing pipeline for a quality management system that integrates inspection results from multiple measurement stations to calculate real-time process capability indices.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7181,
+        "latency": 65.09,
+        "tokens": 153
+      },
+      {
+        "task": "Explain the approach for designing a federated learning system that trains a predictive maintenance model across multiple factory sites without sharing raw sensor data between sites.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7526,
+        "latency": 66.8,
+        "tokens": 154
+      },
+      {
+        "task": "Describe the logical flow and integration points needed to implement an automated non-conformance management system that triggers corrective action workflows when defect rates exceed defined thresholds.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7521,
+        "latency": 66.61,
+        "tokens": 148
+      },
+      {
+        "task": "Outline the algorithm design and communication architecture for a real-time production leveling system that dynamically rebalances work orders across parallel manufacturing cells based on current queue lengths and machine availability.",
+        "category": "coding",
+        "model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7561,
+        "latency": 65.54,
+        "tokens": 143
+      }
+    ],
+    "adaptevolve": [
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in an automated production line?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7302,
+        "latency": 82.71000000000001,
+        "tokens": 160,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Which type of sensor is most commonly used to detect the presence of metal objects in a quality control station?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7445,
+        "latency": 57.25,
+        "tokens": 157,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "How does a SCADA system differ from a standard PLC in terms of its operational scope within a factory?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6812,
+        "latency": 61.53,
+        "tokens": 178,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the main purpose of a pneumatic cylinder in a robotic welding cell?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7319,
+        "latency": 59.239999999999995,
+        "tokens": 165,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What role does a Manufacturing Execution System (MES) play in connecting shop floor data to enterprise resource planning software?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7184,
+        "latency": 64.41,
+        "tokens": 178,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in a discrete manufacturing environment?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7193,
+        "latency": 59.36,
+        "tokens": 159,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Which safety system is specifically designed to detect and prevent personnel from entering hazardous zones around rotating machinery?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7385,
+        "latency": 37.489999999999995,
+        "tokens": 74,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "How does a Frequency Inverter (VFD) control the speed of an electric motor in an industrial drive system?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7808,
+        "latency": 63.47,
+        "tokens": 178,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the main purpose of a Machine Tool Monitoring System in a CNC machining center?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7009,
+        "latency": 60.519999999999996,
+        "tokens": 158,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Which pneumatic component is typically used to convert compressed air energy into rotational motion?",
+        "category": "simple",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.7436,
+        "latency": 4.11,
+        "tokens": 38,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "What is the primary function of a SCADA system in a water treatment plant?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7199,
+        "latency": 57.61,
+        "tokens": 175,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "In CNC machining, what is the purpose of the G-code command G01?",
+        "category": "simple",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.7186,
+        "latency": 152.17999999999998,
+        "tokens": 145,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "How does a pneumatic cylinder convert compressed air into linear motion in an automation cell?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7507,
+        "latency": 79.59,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the main difference between Statistical Process Control (SPC) and traditional inspection methods?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7175,
+        "latency": 70.0,
+        "tokens": 174,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What safety protocol is typically required when performing maintenance on a machine guarded by an e-stop button?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.736,
+        "latency": 61.879999999999995,
+        "tokens": 179,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in modern manufacturing automation systems?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7252,
+        "latency": 59.93000000000001,
+        "tokens": 171,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "In a CNC machining environment, what is the specific role of the G-code and M-code within the program structure?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7898,
+        "latency": 60.58,
+        "tokens": 152,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "How does a 4-20mA current loop typically transmit analog sensor data over long industrial distances compared to voltage signals?",
+        "category": "simple",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.6963,
+        "latency": 8.18,
+        "tokens": 147,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "What is the fundamental difference between a solenoid valve's direct-on-line operation and its pilot-operated control method?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.794,
+        "latency": 61.09,
+        "tokens": 150,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Which safety standard specifically outlines the requirements for protective equipment and hazardous area classification in industrial settings?",
+        "category": "simple",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.6826,
+        "latency": 8.25,
+        "tokens": 130,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "What is the primary function of a Programmable Logic Controller (PLC) in an industrial automation system?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7087,
+        "latency": 60.07,
+        "tokens": 165,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "How does a SCADA system differ from a standard PLC regarding data monitoring and control capabilities?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7193,
+        "latency": 62.86,
+        "tokens": 169,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the specific purpose of a pneumatic proportional valve in fluid power control applications?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6833,
+        "latency": 57.160000000000004,
+        "tokens": 173,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Which safety standard specifically addresses the design of machinery to prevent accidents involving hazardous energy?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7976,
+        "latency": 36.269999999999996,
+        "tokens": 71,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the main role of a Material Requirement Planning (MRP) system in supply chain management?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.718,
+        "latency": 63.550000000000004,
+        "tokens": 170,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the sequence of actions a pneumatic safety interlock system performs when a robot cell door is opened during an automated assembly line, specifically detailing how it cuts power to the actuators and engages the emergency stop circuit.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7585,
+        "latency": 71.34,
+        "tokens": 176,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the process engineering steps required to optimize the flow rate and temperature distribution in a large-scale polymer extruder to prevent material degradation while maintaining consistent wall thickness.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6904,
+        "latency": 62.05,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the troubleshooting procedure for a CNC machine experiencing intermittent tool chatter, including how to analyze spindle vibration data, check tool wear, and adjust feed rates or coolant pressure to resolve the issue.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7285,
+        "latency": 65.37,
+        "tokens": 149,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Compare the operational advantages and limitations of using a SCADA system versus a direct PLC-based monitoring approach for managing real-time data in a pharmaceutical manufacturing environment regarding batch traceability.",
+        "category": "medium",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.7189,
+        "latency": 8.45,
+        "tokens": 159,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Detail the cause-and-effect relationship between poor hydraulic filtration maintenance and the accelerated failure of variable displacement pumps in a heavy-duty manufacturing press, focusing on valve sticking and system pressure instability.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7612,
+        "latency": 60.81,
+        "tokens": 154,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "In a CNC machining cell, explain the specific role of tool length compensation and how it differs from diameter compensation when programming a tool path for a variable-height pocket, including the sequence of operations required to avoid collisions.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7156,
+        "latency": 65.71000000000001,
+        "tokens": 174,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Compare the operational reliability and maintenance frequency of PLC-based logic control versus a modern Industrial IoT (IIoT) cloud-based control system for a remote pump station, focusing on latency and the implications for real-time shutdowns.",
+        "category": "medium",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.6947,
+        "latency": 8.81,
+        "tokens": 155,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Describe the cause-and-effect relationship between fluid viscosity changes in a hydraulic cylinder due to temperature fluctuations and the resulting impact on actuator speed and power consumption in a heavy lifting crane.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7366,
+        "latency": 65.42,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the critical safety interlock mechanisms required in a welding robot cell to prevent arc flash and mechanical entanglement, detailing how emergency stop buttons and light curtains interact with the main controller to de-energize the system.",
+        "category": "medium",
+        "final_model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.6734,
+        "latency": 261.4,
+        "tokens": 163,
+        "escalations": 7,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b",
+          "qwen3.5:9b"
+        ]
+      },
+      {
+        "task": "Explain the process of statistical process control (SPC) using a control chart to detect a shift in mean production output on an automated assembly line, and describe the corrective actions a technician should take when a \"runaway\" condition is identified.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7656,
+        "latency": 83.85,
+        "tokens": 169,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the operational sequence and safety interlocks required when operating a hydraulic press in a metal stamping line, specifically detailing how the system prevents accidental activation if a worker's hand enters the dead zone.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.746,
+        "latency": 81.71000000000001,
+        "tokens": 166,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the logic behind a SCADA system's alarm hierarchy that distinguishes between a \"warning\" for a minor pressure fluctuation and a \"critical\" alert that triggers an automatic shutdown in a chemical mixing process.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7802,
+        "latency": 70.76,
+        "tokens": 177,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Analyze the cause-and-effect relationship between excessive vibration in a CNC milling machine and the resulting surface finish quality, and propose two specific procedural changes to the toolpath or machine parameters to mitigate this issue.",
+        "category": "medium",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.6994,
+        "latency": 209.04000000000002,
+        "tokens": 154,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "Compare the maintenance strategies of a predictive maintenance system based on industrial IoT sensors versus a traditional reactive maintenance approach for rotating equipment like pumps and compressors in a petrochemical plant.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7769,
+        "latency": 108.81,
+        "tokens": 143,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the step-by-step procedure for calibrating a laser welder's focus and power settings to ensure consistent penetration depth in a high-speed automotive assembly line, emphasizing the importance of repeatability in the welding parameters.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7016,
+        "latency": 76.42,
+        "tokens": 171,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "In a high-speed CNC machining center, explain the specific sequence of events that occurs when the controller detects a tool collision, detailing how the emergency stop signal is propagated through the electrical system to cut power to the servos and engage the mechanical brake.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7016,
+        "latency": 64.45,
+        "tokens": 168,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the operational difference between a standard pressure-relief valve and a back-pressure regulator used in a pneumatic conveying system, and explain why a back-pressure regulator is essential for maintaining consistent material flow rates in long-distance pipelines.",
+        "category": "medium",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.6945,
+        "latency": 8.7,
+        "tokens": 171,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Outline the root-cause analysis steps required to diagnose a recurring intermittent alarm in a SCADA system for a water treatment plant, specifically focusing on differentiating between a faulty field device, a communication protocol error, and a misconfigured logic point in the central database.",
+        "category": "medium",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.6896,
+        "latency": 8.8,
+        "tokens": 180,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Explain the cause-and-effect relationship between thermal expansion in a large-scale hydraulic press and the resulting dimensional inaccuracies in the final product, and describe how a closed-loop feedback sensor system compensates for this mechanical shift during operation.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7895,
+        "latency": 63.199999999999996,
+        "tokens": 157,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Discuss the challenges of implementing a predictive maintenance strategy for a batch reactor using industrial IoT sensors, including how to handle varying process conditions between different production batches to ensure the maintenance algorithms generate accurate failure predictions.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.731,
+        "latency": 66.66,
+        "tokens": 182,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Compare the operational principles of a SCADA system and an MES system in a modern textile mill, specifically explaining how data flows from field devices like pressure sensors to the central database in each architecture and the typical end-user applications for that data.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.752,
+        "latency": 66.67,
+        "tokens": 156,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the step-by-step procedure for performing a vibration analysis on a high-speed CNC spindle to diagnose early-stage bearing failure, including how to interpret the specific frequency signatures that distinguish mechanical faults from normal operational noise.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7288,
+        "latency": 67.08000000000001,
+        "tokens": 154,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the cause-and-effect relationship between air pressure fluctuations in a pneumatic conveying system and the risk of material segregation, detailing how adjusting the feeder valve timing can stabilize the flow rate in a food processing facility.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7018,
+        "latency": 64.3,
+        "tokens": 176,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the safety protocols and engineering controls required to manage high-voltage electrical isolation during a maintenance shutdown of an automated assembly line, emphasizing the difference between \"dead front\" and \"dead zone\" configurations in electrical switchgear.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7374,
+        "latency": 66.0,
+        "tokens": 153,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Analyze the impact of changing a batch size in a continuous fermentation process on the overall system stability, discussing how the controller must adjust feed rates and agitation speed to prevent bacterial contamination while maintaining consistent product yield.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7236,
+        "latency": 64.57,
+        "tokens": 180,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive diagnostic procedure for a recurring overheating fault in the hydraulic cooling system of a multi-axis robotic welding cell, detailing the steps for isolating the radiator bypass valve, checking oil viscosity versus ambient temperature correlations, verifying the pump flow rate against thermal load calculations, and recalibrating the temperature controller PID parameters.",
+        "category": "complex",
+        "final_model": "tinyllama:1.1b",
+        "quality": 0.6,
+        "confidence": 0.7451,
+        "latency": 9.09,
+        "tokens": 166,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Design a fail-safe logic sequence for an automated conveyor belt sorting system that integrates pressure sensors at multiple intervals and a central SCADA interface, ensuring the system safely stops and engages emergency brakes if an object larger than the defined threshold is detected while maintaining data logging of the event for root cause analysis.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7849,
+        "latency": 67.02,
+        "tokens": 176,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed validation protocol for introducing a new granular additive into a continuous chemical mixing process, covering the initial batch size determination, the calculation of heat dissipation rates for the mixer impellers, the simulation of viscosity changes over time, and the establishment of quality control checkpoints for pH and concentration before full-scale production.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7931,
+        "latency": 72.37,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Formulate a strategic maintenance schedule for a large industrial air compressor network that includes predictive analysis of motor vibration patterns, rotation of oil filters based on particulate count thresholds, inspection of the aftercooler for condensation buildup, and optimization of the cycle timing to reduce overall energy consumption without compromising output pressure stability.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7786,
+        "latency": 67.93,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Engineer a software integration plan to connect legacy barcode scanners with a modern ERP system for inventory tracking in a pharmaceutical manufacturing line, addressing the necessary data mapping, error handling protocols for unreadable codes, the design of a real-time alert system for stock discrepancies, and the security measures required to protect sensitive patient data during the synchronization process.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7276,
+        "latency": 59.8,
+        "tokens": 155,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Diagnose a recurring thermal runaway event in a high-pressure hydraulic cooling loop of a petrochemical reactor by correlating sensor logs, valve actuation sequences, and fluid viscosity data to identify the specific component failure requiring immediate isolation and repair.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.8051,
+        "latency": 68.63,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive software integration protocol for a new SCADA system that must synchronize real-time data from 50 distributed PLCs across three separate factory floors while ensuring sub-200ms latency and maintaining historical data integrity for regulatory compliance audits.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7248,
+        "latency": 66.10000000000001,
+        "tokens": 156,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a multi-stage validation procedure for a new industrial robotic cell performing automated weld seam verification on large-scale steel girders, including steps for collision avoidance logic programming, thermal stress simulation, and operator safety interlock testing.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7577,
+        "latency": 64.81,
+        "tokens": 165,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed corrective action plan to reduce operator error rates in a pneumatic assembly line by redesigning the human-machine interface (HMI) and implementing a new feedback mechanism that provides real-time quality alerts directly to the control panel of each station.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7946,
+        "latency": 62.9,
+        "tokens": 154,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Evaluate the lifecycle efficiency of a modular conveyor belt system in a food processing facility by calculating energy consumption per unit, waste heat recovery potential, and material throughput capacity, then propose an optimization strategy to reduce operational costs by 15% over the next fiscal year.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7902,
+        "latency": 66.19,
+        "tokens": 167,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive safety interlock and emergency stop logic sequence for a multi-axis robotic welding cell, ensuring compliance with ISO 13849-1 standards, by mapping sensor inputs to PLC outputs, defining fail-safe states, and validating response times against hazardous zones.",
+        "category": "complex",
+        "final_model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7056,
+        "latency": 252.82000000000002,
+        "tokens": 157,
+        "escalations": 6,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b",
+          "qwen3.5:9b"
+        ]
+      },
+      {
+        "task": "Design a closed-loop thermal management and fluid filtration protocol for a large-scale hydraulic press system used in aerospace forging, including steps for oil degradation monitoring, pump pressure regulation, and contamination removal scheduling.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7479,
+        "latency": 82.94,
+        "tokens": 138,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed root cause analysis and corrective action procedure for a recurring vibration anomaly in a centrifugal compressor unit, requiring diagnostic tool calibration, spectral analysis interpretation, bearing wear assessment, and mechanical alignment correction.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7819,
+        "latency": 65.31,
+        "tokens": 146,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline a step-by-step validation and risk assessment process for introducing a new programmable logic controller (PLC) into an existing SCADA network, covering hardware compatibility testing, network latency optimization, cybersecurity penetration simulation, and data integrity verification.",
+        "category": "complex",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.6918,
+        "latency": 8.97,
+        "tokens": 152,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Formulate a preventive maintenance and condition-based monitoring strategy for a continuous glass bottle filling line, integrating sensor data analysis for capping torque consistency, conveyor belt wear prediction, and automated lubrication cycle adjustment.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7774,
+        "latency": 66.2,
+        "tokens": 163,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a full-scale preventive maintenance schedule for a high-speed CNC milling machine used in automotive part manufacturing, including specific intervals for lubrication, tool wear monitoring via vibration analysis, and ball-screw calibration checks.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7391,
+        "latency": 67.72999999999999,
+        "tokens": 146,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a fault diagnosis and isolation protocol for a hydraulic pressure loss in a multi-axis robotic welding cell, covering steps from sensor data correlation, valve isolation testing, fluid contamination analysis, and pump performance verification.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7253,
+        "latency": 65.21,
+        "tokens": 150,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed production validation plan for a new batch of aerospace turbine blades, involving statistical process control (SPC) charting, non-destructive testing results review, dimensional tolerance analysis, and final heat treatment certification.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6919,
+        "latency": 65.24,
+        "tokens": 144,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Engineer a fail-safe logic sequence for a critical SCADA system controlling a chemical batching process, integrating redundant pressure sensors, automatic valve locking mechanisms, and emergency shutdown triggers for temperature spikes.",
+        "category": "complex",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.7179,
+        "latency": 8.57,
+        "tokens": 157,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Design a comprehensive industrial IoT data architecture for a smart factory floor, specifying sensor types for predictive maintenance, network topology for low-latency control signals, cloud storage protocols for historical trend analysis, and real-time visualization dashboards.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7343,
+        "latency": 77.9,
+        "tokens": 139,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive fault diagnosis and recovery protocol for a PLC-controlled automated packaging line where the vision inspection system falsely rejects green-colored bottles due to variable lighting conditions in the packaging bay.",
+        "category": "complex",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.7549,
+        "latency": 14.78,
+        "tokens": 166,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Design a redundant hydraulic circuit upgrade for a heavy-duty press in the aerospace sector to meet ISO 4413 safety standards while ensuring zero-pressure maintenance during production cycles.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7862,
+        "latency": 81.44,
+        "tokens": 149,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a data integration strategy to map and synchronize real-time SCADA data from five disparate legacy machine controllers to a modern industrial IoT cloud platform for predictive vibration analysis.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.754,
+        "latency": 65.02000000000001,
+        "tokens": 165,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Formulate a detailed quality control validation plan to verify the dimensional tolerances of turbine blades manufactured by a multi-axis CNC machining cluster using non-contact laser scanning and statistical process control.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6957,
+        "latency": 69.34,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Engineer a fail-safe emergency stop sequence and interlock logic for a robotic arc welding cell to prevent hazardous collisions between the robot arm and the automated overhead crane system.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7324,
+        "latency": 67.82,
+        "tokens": 174,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the logical flow and data structures required to build a predictive maintenance framework that correlates temperature trends and vibration frequencies from multiple CNC machines to forecast tool wear before a failure occurs.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7911,
+        "latency": 66.59,
+        "tokens": 179,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the key steps and decision logic for implementing a SCADA-based emergency shutdown sequence in a chemical processing plant that triggers automatically when pressure sensors exceed critical thresholds or when gas leak detectors activate.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7536,
+        "latency": 64.67,
+        "tokens": 169,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the approach for creating a real-time quality control system that uses computer vision to detect microscopic surface defects on metal sheets moving along a high-speed roll-to-roll manufacturing line.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.789,
+        "latency": 64.74000000000001,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Detail the implementation strategy for a warehouse robotics network where autonomous mobile robots (AMRs) must dynamically re-route around obstacles while maintaining a collision-free path in a dynamic logistics environment.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.8003,
+        "latency": 65.42,
+        "tokens": 156,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the algorithmic logic for optimizing the timing and sequencing of pneumatic actuators in an automated assembly line to maximize throughput while minimizing air pressure consumption and mechanical stress.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7294,
+        "latency": 63.83,
+        "tokens": 158,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the logic and data flow required to build a SCADA-based real-time monitoring system for a continuous chemical reactor, detailing how to aggregate high-frequency sensor inputs, handle signal filtering for noise, and trigger automatic shutdown sequences when critical pressure thresholds are breached.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6806,
+        "latency": 67.74000000000001,
+        "tokens": 156,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the step-by-step approach to designing a predictive maintenance algorithm for CNC machine tools using historical spindle vibration and temperature logs, focusing on the selection of time-series data structures and the reasoning behind choosing specific statistical thresholds to predict impending tool wear without generating actual code.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7507,
+        "latency": 70.6,
+        "tokens": 171,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the architectural strategy for implementing a decentralized robotics coordination system in an automated warehouse, where multiple AGVs must dynamically adjust their pathing algorithms to avoid collisions while optimizing a moving delivery schedule based on real-time order updates.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7553,
+        "latency": 66.96000000000001,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Provide a detailed explanation of the control logic needed to design a safety interlock system for an industrial press, covering the sequence of events for emergency stop activation, the verification of sensor inputs (light curtains and proximity detectors), and the specific timing delays required to prevent accidental operator injury.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7052,
+        "latency": 67.45,
+        "tokens": 181,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the methodology for creating a digital twin simulation framework to model the thermal dynamics and fluid pressure distribution within a large-scale hydraulic transmission system, emphasizing the key mathematical relationships between pump flow rates, valve openings, and system efficiency losses.",
+        "category": "coding",
+        "final_model": "tinyllama:1.1b",
+        "quality": 0.8,
+        "confidence": 0.7631,
+        "latency": 8.57,
+        "tokens": 177,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Describe the logical steps and data flow architecture required to build a predictive maintenance system that analyzes oil viscosity and temperature sensor readings from a hydraulic press to predict seal failure before it occurs.",
+        "category": "coding",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.6928,
+        "latency": 26.14,
+        "tokens": 199,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Explain the decision-making algorithm and input parameters needed to program a collaborative robot (cobot) to safely inspect and reject defective parts on an automated assembly line using computer vision.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7325,
+        "latency": 62.81,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the logic and control sequence for a SCADA-based process engineering system that regulates pH levels and flow rates in a continuous chemical mixing tank to ensure product consistency.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7118,
+        "latency": 63.32,
+        "tokens": 180,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Detail the approach for designing a safety interlock system that automatically cuts power to a CNC machining spindle if a worker enters the designated operational zone detected by laser scanners.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7461,
+        "latency": 64.51,
+        "tokens": 174,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the data aggregation and validation strategy to create a real-time supply chain dashboard that tracks shipment delays and inventory levels across multiple regional warehouses using IoT gateways.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7209,
+        "latency": 63.14,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the logic and data flow required to build a real-time thermal monitoring dashboard for a steel rolling mill, focusing on how SCADA data streams are aggregated, visualized, and thresholded to trigger alerts for furnace overheating.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.77,
+        "latency": 68.51,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the algorithmic approach for developing a collision avoidance system for an autonomous mobile robot in a cluttered warehouse, detailing how it processes LiDAR point cloud data to identify obstacles and calculate safe trajectories without writing executable code.",
+        "category": "coding",
+        "final_model": "tinyllama:1.1b",
+        "quality": 0.8,
+        "confidence": 0.6902,
+        "latency": 8.8,
+        "tokens": 171,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Describe the step-by-step reasoning needed to design a predictive maintenance framework for CNC lathes that uses historical vibration and spindle load data to forecast tool wear and suggest optimal replacement times.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7832,
+        "latency": 64.49000000000001,
+        "tokens": 172,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Provide a detailed breakdown of the logic for implementing a pneumatic valve control sequence in an automated packaging line, including how to handle pressure regulation, timing delays, and failure recovery mechanisms.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7112,
+        "latency": 63.85,
+        "tokens": 156,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Articulate the core principles and data structures required to build a supply chain optimization module that minimizes lead time variability for just-in-time deliveries in a complex assembly plant, considering factors like supplier reliability and logistics routing.",
+        "category": "coding",
+        "final_model": "tinyllama:1.1b",
+        "quality": 0.8,
+        "confidence": 0.6891,
+        "latency": 8.54,
+        "tokens": 171,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Explain the logical flow and data structures required to build a PLC-based interlock system that prevents a hydraulic press from operating when a safety door is open or an operator override button is pressed.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7472,
+        "latency": 63.879999999999995,
+        "tokens": 134,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the key steps and algorithmic approach for developing a predictive maintenance solution that analyzes CNC machining spindle vibration and temperature logs to forecast tool wear and prevent catastrophic failures.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7294,
+        "latency": 65.89,
+        "tokens": 160,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the architecture and processing pipeline needed to create a real-time quality control system that uses computer vision to detect surface defects on high-speed conveyor belts in a food packaging plant.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7413,
+        "latency": 63.480000000000004,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Detail the logic and communication protocols for implementing a SCADA monitoring system that tracks fluid levels and pressure in a chemical storage facility while managing automated valve actuation during emergency shutdown scenarios.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7363,
+        "latency": 63.879999999999995,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the control strategy and sensor fusion techniques required to program a mobile robot for autonomous navigation and collision avoidance in a dynamic warehouse environment with moving forklifts and uneven floor surfaces.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7856,
+        "latency": 66.17,
+        "tokens": 163,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the function of a pressure relief valve in a hydraulic system?",
+        "category": "simple",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.7809,
+        "latency": 155.89,
+        "tokens": 145,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "Define the term 'cycle time' in the context of an automated assembly line.",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6982,
+        "latency": 78.23,
+        "tokens": 178,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What does OEE stand for and what does it measure in manufacturing?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.713,
+        "latency": 56.870000000000005,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the purpose of a watchdog timer in an embedded industrial control system.",
+        "category": "simple",
+        "final_model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.74,
+        "latency": 242.60000000000002,
+        "tokens": 180,
+        "escalations": 6,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b",
+          "qwen3.5:9b"
+        ]
+      },
+      {
+        "task": "What is the difference between a servo motor and a stepper motor in industrial automation?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6961,
+        "latency": 78.93,
+        "tokens": 179,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Define 'dead band' in the context of a PID controller.",
+        "category": "simple",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.7091,
+        "latency": 152.11,
+        "tokens": 161,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "What is the role of a fieldbus protocol such as PROFIBUS in factory automation?",
+        "category": "simple",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.7483,
+        "latency": 186.44,
+        "tokens": 168,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "Explain what a P&ID diagram is and what information it contains.",
+        "category": "simple",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.6904,
+        "latency": 183.43,
+        "tokens": 158,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "What is the difference between preventive maintenance and corrective maintenance?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7256,
+        "latency": 77.28999999999999,
+        "tokens": 163,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Define 'torque ripple' and explain why it matters in precision motor control.",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7329,
+        "latency": 65.8,
+        "tokens": 167,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is a safety integrity level (SIL) and how is it used in industrial safety?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7295,
+        "latency": 59.05,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain what ANDON is in a lean manufacturing context.",
+        "category": "simple",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.6851,
+        "latency": 159.20999999999998,
+        "tokens": 162,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "What is the purpose of a flow meter in an industrial process control system?",
+        "category": "simple",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.7437,
+        "latency": 178.19,
+        "tokens": 165,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "Define 'jidoka' and explain its significance in Toyota Production System.",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7236,
+        "latency": 69.64,
+        "tokens": 111,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the difference between an encoder and a resolver in motion control?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7182,
+        "latency": 64.48,
+        "tokens": 150,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain what a Poka-Yoke device is and give an industrial example.",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7562,
+        "latency": 58.769999999999996,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the role of a distributed control system (DCS) in process industries?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.709,
+        "latency": 64.11,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Define 'mean time between failures' (MTBF) and explain how it is calculated.",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.721,
+        "latency": 63.22,
+        "tokens": 187,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the purpose of a check valve in a pneumatic circuit?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7105,
+        "latency": 52.43,
+        "tokens": 123,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain what a Kanban system is and how it controls inventory in manufacturing.",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6801,
+        "latency": 64.53999999999999,
+        "tokens": 188,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the difference between open-loop and closed-loop control in industrial systems?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7035,
+        "latency": 62.85,
+        "tokens": 184,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Define 'backlash' in mechanical systems and explain its effect on positioning accuracy.",
+        "category": "simple",
+        "final_model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7632,
+        "latency": 240.26999999999998,
+        "tokens": 178,
+        "escalations": 6,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b",
+          "qwen3.5:9b"
+        ]
+      },
+      {
+        "task": "What is a safe torque off (STO) function in variable frequency drives?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7992,
+        "latency": 74.86,
+        "tokens": 138,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain what a programmable safety controller (PSC) does in a safety system.",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7571,
+        "latency": 63.16,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "What is the purpose of an industrial Ethernet switch in a factory network?",
+        "category": "simple",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7105,
+        "latency": 58.5,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain how a proportional-integral-derivative (PID) controller works and describe the effect of each tuning parameter on system response.",
+        "category": "medium",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.6988,
+        "latency": 25.98,
+        "tokens": 195,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Describe the working principle of a variable frequency drive (VFD) and explain how it reduces energy consumption in pump applications.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7871,
+        "latency": 64.33,
+        "tokens": 165,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Compare the advantages and disadvantages of pneumatic versus electric actuation systems in high-speed assembly applications.",
+        "category": "medium",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.7515,
+        "latency": 22.259999999999998,
+        "tokens": 149,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Explain how condition monitoring using vibration analysis can detect early bearing failure in rotating machinery.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7307,
+        "latency": 61.13,
+        "tokens": 167,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the key differences between OPC-UA and MQTT protocols and explain which is more suitable for industrial IoT applications.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7317,
+        "latency": 64.19,
+        "tokens": 135,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain how a digital twin differs from a simulation model and describe the key data requirements for building an accurate digital twin.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7344,
+        "latency": 65.77000000000001,
+        "tokens": 196,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the steps involved in commissioning a new industrial robot in a manufacturing cell, including safety validation.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7695,
+        "latency": 65.28999999999999,
+        "tokens": 179,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain what edge computing means in an industrial context and describe its advantages over cloud-only architectures for real-time control.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7432,
+        "latency": 62.31999999999999,
+        "tokens": 178,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe how statistical process control (SPC) charts are used to monitor and maintain product quality in a continuous manufacturing process.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7647,
+        "latency": 62.16,
+        "tokens": 188,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the difference between functional safety and cybersecurity in industrial control systems and describe why both are required.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.763,
+        "latency": 58.35,
+        "tokens": 155,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe how a SCADA system collects, processes, and displays data from field devices in a water treatment facility.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7556,
+        "latency": 63.16,
+        "tokens": 163,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain what machine vision is in industrial quality control and describe how it detects surface defects on high-speed production lines.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7624,
+        "latency": 64.19,
+        "tokens": 183,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the role of IEC 61508 in industrial safety system design and explain its key requirements for hardware and software.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6998,
+        "latency": 63.99,
+        "tokens": 156,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain how torque control differs from speed control in servo drive applications and describe when each mode is appropriate.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7418,
+        "latency": 63.620000000000005,
+        "tokens": 181,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the working principle of an inductive proximity sensor and explain its advantages over mechanical limit switches in harsh environments.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.795,
+        "latency": 64.93,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain how a motion profile (trapezoidal or S-curve) improves positioning accuracy and reduces mechanical stress in servo systems.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7006,
+        "latency": 63.68000000000001,
+        "tokens": 169,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the key steps in conducting a Failure Mode and Effects Analysis (FMEA) for a new automated welding system.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7584,
+        "latency": 62.04,
+        "tokens": 160,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain how a heat exchanger works in an industrial cooling system and describe the factors that determine its thermal efficiency.",
+        "category": "medium",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.7402,
+        "latency": 23.07,
+        "tokens": 178,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Describe what protocol conversion means in industrial automation and explain why it is needed when integrating legacy equipment.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7251,
+        "latency": 61.269999999999996,
+        "tokens": 176,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the concept of redundancy in safety-critical industrial systems and describe the difference between hot standby and cold standby configurations.",
+        "category": "medium",
+        "final_model": "qwen3.5:9b",
+        "quality": 1.0,
+        "confidence": 0.7556,
+        "latency": 287.44,
+        "tokens": 158,
+        "escalations": 6,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b",
+          "qwen3.5:9b"
+        ]
+      },
+      {
+        "task": "Describe how a collaborative robot (cobot) differs from a traditional industrial robot and explain the key safety considerations for human-robot collaboration.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7603,
+        "latency": 85.06,
+        "tokens": 166,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain how compressed air quality affects pneumatic actuator performance and describe the filtration and drying requirements for different applications.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7696,
+        "latency": 65.56,
+        "tokens": 149,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the purpose of a manufacturing execution system (MES) and explain how it connects ERP systems to shop floor equipment.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7254,
+        "latency": 63.71,
+        "tokens": 173,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain what predictive quality means in smart manufacturing and describe how sensor data is used to predict product defects before they occur.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7512,
+        "latency": 63.46,
+        "tokens": 174,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the key differences between ISO 13849 and IEC 62061 safety standards and explain which applies to machinery safety systems.",
+        "category": "medium",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.763,
+        "latency": 66.65,
+        "tokens": 144,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a comprehensive energy management strategy for a large automotive stamping plant that integrates demand response, peak shaving, and waste heat recovery to reduce total energy costs by 20% over two years.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7186,
+        "latency": 72.5,
+        "tokens": 170,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a multi-layer cybersecurity architecture for an oil refinery SCADA network that segments operational technology from IT systems while maintaining real-time data visibility for remote monitoring.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.8074,
+        "latency": 68.57,
+        "tokens": 150,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed validation and qualification plan for a new pharmaceutical filling line, covering equipment qualification (IQ/OQ/PQ), process validation, and regulatory compliance with FDA 21 CFR Part 11.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.8032,
+        "latency": 91.94,
+        "tokens": 126,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a predictive maintenance framework for a fleet of 50 CNC machining centers that integrates vibration, thermal, and acoustic sensors with a machine learning model to predict tool failures 24 hours in advance.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7569,
+        "latency": 67.74000000000001,
+        "tokens": 163,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive functional safety plan for a new automated guided vehicle (AGV) fleet operating in a mixed human-robot warehouse, covering hazard analysis, SIL assessment, and safety architecture design.",
+        "category": "complex",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.7082,
+        "latency": 9.02,
+        "tokens": 156,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Design a digital twin architecture for a continuous casting process in a steel mill that models solidification dynamics, thermal stress, and surface quality in real-time to optimize casting speed and reduce defect rates.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7926,
+        "latency": 78.08000000000001,
+        "tokens": 172,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed root cause analysis and corrective action plan for a recurring hydraulic seal failure in a heavy press line, covering tribological analysis, operating condition review, and material selection recommendations.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7495,
+        "latency": 79.34,
+        "tokens": 153,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive OEE improvement roadmap for a beverage bottling plant that identifies the top five loss categories, proposes technical solutions for each, and defines KPIs to track progress over 12 months.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7272,
+        "latency": 64.49,
+        "tokens": 140,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design an industrial IoT platform architecture for a multi-site food processing company that aggregates sensor data from 200 machines across five plants into a unified real-time dashboard with anomaly detection.",
+        "category": "complex",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.7226,
+        "latency": 174.93,
+        "tokens": 169,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "Create a detailed risk assessment and mitigation plan for introducing a collaborative robot to a manual assembly station where workers perform precision insertion tasks with fragile electronic components.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.74,
+        "latency": 81.38,
+        "tokens": 148,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive change management procedure for upgrading the firmware of 30 PLCs controlling a continuous chemical production line without interrupting production or compromising process safety.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7085,
+        "latency": 72.97,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a closed-loop quality control system for a high-speed injection molding process that uses in-mold pressure sensors and cavity temperature data to automatically adjust process parameters and reject defective parts.",
+        "category": "complex",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.6805,
+        "latency": 26.81,
+        "tokens": 205,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed commissioning and acceptance testing procedure for a new 10 MW solar-plus-storage microgrid powering an industrial campus, covering grid-forming control, islanding detection, and protection coordination.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7724,
+        "latency": 63.760000000000005,
+        "tokens": 148,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a supply chain resilience strategy for a tier-one automotive parts manufacturer that identifies single-source dependencies, proposes dual-sourcing plans, and defines buffer stock levels for critical components.",
+        "category": "complex",
+        "final_model": "tinyllama:1.1b",
+        "quality": 1.0,
+        "confidence": 0.7383,
+        "latency": 8.36,
+        "tokens": 157,
+        "escalations": 0,
+        "models_tried": [
+          "tinyllama:1.1b"
+        ]
+      },
+      {
+        "task": "Design a comprehensive asset lifecycle management plan for a fleet of 100 industrial compressors in a gas processing facility, covering condition monitoring, planned replacement scheduling, and spare parts optimization.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7835,
+        "latency": 64.15,
+        "tokens": 146,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed process hazard analysis (PHA) for a new exothermic batch reactor in a specialty chemicals plant, covering runaway reaction scenarios, relief valve sizing, and emergency response procedures.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.8117,
+        "latency": 65.14,
+        "tokens": 147,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a multi-site manufacturing network optimization plan for a consumer electronics company that balances production capacity, logistics costs, and lead times across factories in three countries.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7195,
+        "latency": 68.24000000000001,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a comprehensive water treatment and recycling system for a semiconductor fabrication facility that minimizes ultrapure water consumption and meets wastewater discharge regulations.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7648,
+        "latency": 67.86,
+        "tokens": 139,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed production scheduling optimization strategy for a mixed-model automotive assembly line that minimizes changeover time, balances workstation utilization, and meets daily customer delivery targets.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7571,
+        "latency": 69.96000000000001,
+        "tokens": 154,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive alarm management improvement plan for a petrochemical control room that reduces nuisance alarms by 60%, implements alarm prioritization, and trains operators on revised response procedures.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6974,
+        "latency": 66.4,
+        "tokens": 145,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a real-time quality monitoring system for a continuous paper manufacturing process that integrates basis weight, moisture, and caliper sensors to automatically adjust forming and pressing parameters.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7603,
+        "latency": 64.04,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed technology roadmap for implementing Industry 4.0 capabilities in a traditional machined parts factory over five years, covering connectivity infrastructure, data analytics, and workforce upskilling.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7378,
+        "latency": 63.8,
+        "tokens": 151,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Develop a comprehensive emission monitoring and reduction plan for a cement kiln that integrates continuous emissions monitoring systems (CEMS) with combustion optimization algorithms to meet NOx and SOx limits.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7991,
+        "latency": 63.42,
+        "tokens": 150,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Design a fault-tolerant control architecture for a critical pumping station in a water distribution network that maintains flow continuity during single-point failures of sensors, controllers, or actuators.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7219,
+        "latency": 63.78,
+        "tokens": 167,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Create a detailed qualification and revalidation strategy for a sterile manufacturing cleanroom HVAC system, covering differential pressure mapping, particle count verification, and microbial monitoring protocols.",
+        "category": "complex",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7645,
+        "latency": 65.18,
+        "tokens": 143,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the logical approach for implementing a real-time anomaly detection system for industrial sensor streams using a sliding window statistical model to flag deviations beyond three standard deviations.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7326,
+        "latency": 64.97999999999999,
+        "tokens": 169,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the data pipeline architecture and processing steps needed to build a digital twin that mirrors the state of a physical conveyor system using OPC-UA data feeds.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7062,
+        "latency": 66.34,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the algorithm design and key data structures required to implement an automated shift scheduling system for a 24-hour manufacturing plant with variable skill requirements across workstations.",
+        "category": "coding",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.6913,
+        "latency": 171.76,
+        "tokens": 152,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "Describe the system architecture and integration approach for connecting a legacy PLC-based production line to a modern cloud analytics platform using an edge gateway and MQTT protocol.",
+        "category": "coding",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.6964,
+        "latency": 34.839999999999996,
+        "tokens": 187,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Explain the reasoning and data structures needed to implement a just-in-time material replenishment system that triggers purchase orders based on real-time consumption rates and supplier lead times.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7203,
+        "latency": 72.02,
+        "tokens": 151,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the approach for designing a multi-threaded data acquisition system that simultaneously reads from 100 industrial sensors at different sampling rates without data loss or synchronization errors.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7171,
+        "latency": 74.57,
+        "tokens": 156,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the logic and control flow for implementing an automated tool change sequence in a CNC machining center that verifies tool presence, measures tool length offset, and updates the CNC program accordingly.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.6845,
+        "latency": 66.66,
+        "tokens": 164,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the algorithm design and decision logic for a dynamic routing system in a warehouse AMR fleet that minimizes travel distance while avoiding conflicts between multiple robots operating simultaneously.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.783,
+        "latency": 64.59,
+        "tokens": 170,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the architecture and key processing stages of a real-time energy monitoring system that tracks consumption per machine, detects idle waste, and generates automated alerts for energy anomalies.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7156,
+        "latency": 54.61,
+        "tokens": 159,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the data model and processing logic required to implement a traceability system for automotive components that records every manufacturing step, operator, and machine involved from raw material to finished part.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7941,
+        "latency": 65.32,
+        "tokens": 179,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the algorithmic approach for implementing a model predictive control (MPC) system for a batch chemical reactor that optimizes temperature and feed rate profiles to maximize yield while respecting safety constraints.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7905,
+        "latency": 65.65,
+        "tokens": 190,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the system design and communication protocol stack required to implement a wireless sensor network for structural health monitoring of a large industrial building using LoRaWAN.",
+        "category": "coding",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.691,
+        "latency": 25.880000000000003,
+        "tokens": 190,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Outline the reasoning and key components needed to build a computer vision pipeline that detects and classifies weld defects in real-time on a robotic welding production line.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7696,
+        "latency": 62.61,
+        "tokens": 162,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the logical flow and data structures required to implement an automated production reporting system that aggregates shift data from multiple PLCs and generates KPI dashboards for plant management.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7192,
+        "latency": 65.26,
+        "tokens": 152,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the approach for designing a simulation framework to test and validate PLC ladder logic programs for a safety-critical conveyor system before deployment on the production line.",
+        "category": "coding",
+        "final_model": "phi:latest",
+        "quality": 1.0,
+        "confidence": 0.6974,
+        "latency": 27.16,
+        "tokens": 198,
+        "escalations": 1,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest"
+        ]
+      },
+      {
+        "task": "Outline the algorithm and sensor fusion strategy for implementing a force-torque controlled assembly process where a robot must insert a connector with a defined insertion force profile.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7537,
+        "latency": 65.42,
+        "tokens": 168,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the architecture and data flow of a manufacturing analytics platform that correlates machine downtime events with upstream process parameters to identify root causes of recurring failures.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7724,
+        "latency": 64.09,
+        "tokens": 170,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the logical steps and data structures needed to implement an automated calibration management system that tracks calibration due dates, generates work orders, and records results for audit compliance.",
+        "category": "coding",
+        "final_model": "qwen3.5:4b",
+        "quality": 1.0,
+        "confidence": 0.709,
+        "latency": 167.02,
+        "tokens": 158,
+        "escalations": 5,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest",
+          "qwen3.5:0.8b",
+          "qwen3.5:2b",
+          "qwen3.5:4b"
+        ]
+      },
+      {
+        "task": "Outline the approach for building a reinforcement learning environment that trains an agent to optimize furnace temperature setpoints in a heat treatment process to minimize energy use while meeting metallurgical specifications.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7645,
+        "latency": 85.84,
+        "tokens": 153,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the system architecture and key algorithms needed to implement a real-time tool wear monitoring system for a milling machine using acoustic emission signals and frequency domain analysis.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7138,
+        "latency": 72.63,
+        "tokens": 161,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the reasoning and control logic for implementing an automated leak detection system in a compressed air network that uses flow balance calculations and pressure decay analysis to localize leak sources.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7644,
+        "latency": 66.29,
+        "tokens": 183,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the data architecture and processing pipeline for a quality management system that integrates inspection results from multiple measurement stations to calculate real-time process capability indices.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7213,
+        "latency": 63.31,
+        "tokens": 153,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Explain the approach for designing a federated learning system that trains a predictive maintenance model across multiple factory sites without sharing raw sensor data between sites.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.693,
+        "latency": 62.16,
+        "tokens": 184,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Describe the logical flow and integration points needed to implement an automated non-conformance management system that triggers corrective action workflows when defect rates exceed defined thresholds.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7089,
+        "latency": 63.11,
+        "tokens": 167,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      },
+      {
+        "task": "Outline the algorithm design and communication architecture for a real-time production leveling system that dynamically rebalances work orders across parallel manufacturing cells based on current queue lengths and machine availability.",
+        "category": "coding",
+        "final_model": "mistral:latest",
+        "quality": 1.0,
+        "confidence": 0.7515,
+        "latency": 63.33,
+        "tokens": 163,
+        "escalations": 2,
+        "models_tried": [
+          "tinyllama:1.1b",
+          "phi:latest",
+          "mistral:latest"
+        ]
+      }
+    ]
+  }
+}

@@ -24,6 +24,7 @@ import time
 import json
 import os
 import re
+from collections import Counter as _Counter
 import chromadb
 import matplotlib.pyplot as plt
 import numpy as np
@@ -38,77 +39,36 @@ EMBED_MODEL  = "nomic-embed-text:latest"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PLOTS_DIR  = os.path.join(SCRIPT_DIR, "plots_exp3")
+TASKS_FILE = os.path.join(SCRIPT_DIR, "battery_tasks.json")
 os.makedirs(PLOTS_DIR, exist_ok=True)
 print(f"Plots  → {PLOTS_DIR}\n")
 
-# All 8 models — same as Experiment 1
+# 7 local models — 397B-cloud removed (subscription required)
 MODELS = [
-    {"name": "tinyllama:1.1b",     "label": "TinyLlama\n1.1B",  "params_b": 1.1,   "family": "mixed"},
-    {"name": "phi:latest",         "label": "Phi\n2.7B",         "params_b": 2.7,   "family": "mixed"},
-    {"name": "mistral:latest",     "label": "Mistral\n7B",       "params_b": 7.0,   "family": "mixed"},
-    {"name": "qwen3.5:0.8b",       "label": "Qwen3.5\n0.8B",    "params_b": 0.8,   "family": "qwen3.5"},
-    {"name": "qwen3.5:2b",         "label": "Qwen3.5\n2B",      "params_b": 2.0,   "family": "qwen3.5"},
-    {"name": "qwen3.5:4b",         "label": "Qwen3.5\n4B",      "params_b": 4.0,   "family": "qwen3.5"},
-    {"name": "qwen3.5:9b",         "label": "Qwen3.5\n9B",      "params_b": 9.0,   "family": "qwen3.5"},
-    {"name": "qwen3.5:397b-cloud", "label": "Qwen3.5\n397B",    "params_b": 397.0, "family": "qwen3.5"},
+    {"name": "tinyllama:1.1b",  "label": "TinyLlama\n1.1B",  "params_b": 1.1,  "family": "mixed"},
+    {"name": "phi:latest",      "label": "Phi\n2.7B",         "params_b": 2.7,  "family": "mixed"},
+    {"name": "mistral:latest",  "label": "Mistral\n7B",       "params_b": 7.0,  "family": "mixed"},
+    {"name": "qwen3.5:0.8b",    "label": "Qwen3.5\n0.8B",    "params_b": 0.8,  "family": "qwen3.5"},
+    {"name": "qwen3.5:2b",      "label": "Qwen3.5\n2B",      "params_b": 2.0,  "family": "qwen3.5"},
+    {"name": "qwen3.5:4b",      "label": "Qwen3.5\n4B",      "params_b": 4.0,  "family": "qwen3.5"},
+    {"name": "qwen3.5:9b",      "label": "Qwen3.5\n9B",      "params_b": 9.0,  "family": "qwen3.5"},
 ]
 
 # ============================================================
-# TASKS — same as Experiments 1 and 2
+# LOAD TASKS FROM JSON
+# 20 battery verification tasks — same domain ensures
+# semantic memory retrieval finds relevant past solutions
+# Each task has 5 keyword groups for step coverage scoring
 # ============================================================
 
-TASKS = [
-    {
-        "task": "Diagnose why a battery pack overheats during high-rate discharge and propose a fix.",
-        "expected_keywords": [
-            ["temperature", "thermal", "heat", "temp"],
-            ["cooling", "cooler", "cool", "dissipation"],
-            ["discharge", "discharging", "c-rate"],
-            ["bms", "battery management", "management system"],
-            ["resistance", "impedance", "internal resistance"]
-        ]
-    },
-    {
-        "task": "Design a verification test plan for a battery cell's cycle life performance.",
-        "expected_keywords": [
-            ["charge", "charging"],
-            ["discharge", "discharging"],
-            ["cycle", "cycling", "cycles"],
-            ["capacity", "degradation", "fade", "retention"],
-            ["voltage", "current", "soc", "state of charge"]
-        ]
-    },
-    {
-        "task": "Identify root cause of voltage imbalance across cells in a battery module.",
-        "expected_keywords": [
-            ["voltage", "imbalance", "volt"],
-            ["cell", "cells"],
-            ["balance", "balancing", "balanced"],
-            ["resistance", "impedance", "internal resistance"],
-            ["bms", "battery management", "inspection"]
-        ]
-    },
-    {
-        "task": "Plan a safety validation procedure for a battery management system (BMS).",
-        "expected_keywords": [
-            ["overvoltage", "over-voltage", "over voltage", "voltage limit", "overcharge"],
-            ["overcurrent", "over-current", "over current", "current limit"],
-            ["temperature", "thermal", "overtemperature", "thermal runaway"],
-            ["protection", "protect", "safety", "fault", "isolation"],
-            ["test", "testing", "validation", "verify", "validate"]
-        ]
-    },
-    {
-        "task": "Evaluate the impact of low temperature on battery capacity and suggest mitigations.",
-        "expected_keywords": [
-            ["temperature", "thermal", "cold", "low temp", "sub-zero"],
-            ["capacity", "degradation", "performance", "retention"],
-            ["electrolyte", "chemistry", "lithium", "electrode", "impedance"],
-            ["heating", "heater", "warm", "thermal management", "preconditioning"],
-            ["mitigation", "strategy", "solution", "insulation", "algorithm"]
-        ]
-    },
-]
+with open(TASKS_FILE) as f:
+    TASKS = json.load(f)
+
+print(f"Loaded {len(TASKS)} tasks from {TASKS_FILE}")
+_cats = _Counter(t.get("category", "unknown") for t in TASKS)
+for cat, count in _cats.items():
+    print(f"  {cat}: {count} tasks")
+print()
 
 # ============================================================
 # SEMANTIC MEMORY — ChromaDB + nomic-embed-text

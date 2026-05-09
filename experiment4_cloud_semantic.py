@@ -1,22 +1,34 @@
 """
-Experiment 4 — Cloud Semantic Memory Injection (MemPalace-Inspired)
-====================================================================
-Extends Experiment 2 (cloud injection) by replacing keyword retrieval
-with semantic retrieval using ChromaDB + nomic-embed-text embeddings.
+Experiment 4 — Expert Semantic Memory Injection (MemPalace-Inspired)
+=====================================================================
+Extends Experiment 3 (self semantic memory) by replacing self-generated
+memory with expert model plans, then injecting them semantically.
+
+Expert model: Qwen3.5 9B (largest available local model)
+Note: 397B-cloud model unavailable due to subscription restrictions.
 
 Flow:
-  Step 1: Run 397B-cloud on all 5 tasks → embed and store plans in ChromaDB
-  Step 2: For each small model, retrieve semantically similar cloud plans
-          using cosine similarity (MemPalace approach)
-  Step 3: Inject retrieved cloud plans as expert reference context
-  Step 4: Measure performance — can small models approach large model
-          performance using semantic cloud memory?
+  Step 1: Run Qwen3.5 9B (expert) on all 20 battery tasks
+          → embed expert plans into ChromaDB using nomic-embed-text
+          → save plans to disk to avoid regeneration on re-run
+  Step 2: For each small model (6 models, TinyLlama to Qwen3.5 4B):
+          → Baseline: model answers task with no memory
+          → With memory: retrieve semantically similar 9B expert plans
+            using cosine similarity (MemPalace approach) and inject
+            as expert reference context
+  Step 3: Compare step coverage to measure quality improvement
 
-Comparison with previous experiments:
-  Exp 2: Cloud injection — keyword retrieval
-  Exp 4: Cloud injection — semantic retrieval (this experiment)
+Key research question:
+  Can small models approach large model performance when given
+  high-quality expert plans as semantic memory context?
+
+Comparison with Experiment 3:
+  Exp 3: Self semantic memory — model retrieves its own past answers
+  Exp 4: Expert semantic memory — model retrieves 9B expert plans
+         (this experiment shows the source of memory critically matters)
 
 KPIs: Step Coverage (deterministic), Latency (measured), Token Count
+Task set: 20 battery verification tasks (battery_tasks.json)
 """
 
 import requests
@@ -24,6 +36,7 @@ import time
 import json
 import os
 import re
+from collections import Counter as _Counter
 import chromadb
 import matplotlib.pyplot as plt
 import numpy as np
@@ -35,84 +48,47 @@ import numpy as np
 OLLAMA_URL  = "http://localhost:11434/api/chat"
 EMBED_URL   = "http://localhost:11434/api/embeddings"
 EMBED_MODEL = "nomic-embed-text:latest"
-CLOUD_MODEL = "qwen3.5:397b-cloud"
+# Expert model — largest available local model
+# 397B-cloud unavailable (subscription required)
+# 9B generates high quality expert plans for injection into smaller models
+CLOUD_MODEL = "qwen3.5:9b"
 
 SCRIPT_DIR        = os.path.dirname(os.path.abspath(__file__))
 PLOTS_DIR         = os.path.join(SCRIPT_DIR, "plots_exp4")
 MEMORY_DIR        = os.path.join(SCRIPT_DIR, "memory_files")
-CLOUD_MEMORY_FILE = os.path.join(MEMORY_DIR, "memory_cloud_397b.json")
+TASKS_FILE        = os.path.join(SCRIPT_DIR, "battery_tasks.json")
+CLOUD_MEMORY_FILE = os.path.join(MEMORY_DIR, "memory_expert_9b.json")
 os.makedirs(PLOTS_DIR,  exist_ok=True)
 os.makedirs(MEMORY_DIR, exist_ok=True)
 print(f"Plots  → {PLOTS_DIR}")
 print(f"Memory → {MEMORY_DIR}\n")
 
-# Small models to test with cloud semantic memory injected
+# Small models — 9B excluded as it is the expert model
+# Inject 9B expert plans into these 6 smaller models
 SMALL_MODELS = [
-    {"name": "tinyllama:1.1b",     "label": "TinyLlama\n1.1B",  "params_b": 1.1},
-    {"name": "phi:latest",         "label": "Phi\n2.7B",         "params_b": 2.7},
-    {"name": "mistral:latest",     "label": "Mistral\n7B",       "params_b": 7.0},
-    {"name": "qwen3.5:0.8b",       "label": "Qwen3.5\n0.8B",    "params_b": 0.8},
-    {"name": "qwen3.5:2b",         "label": "Qwen3.5\n2B",      "params_b": 2.0},
-    {"name": "qwen3.5:4b",         "label": "Qwen3.5\n4B",      "params_b": 4.0},
-    {"name": "qwen3.5:9b",         "label": "Qwen3.5\n9B",      "params_b": 9.0},
+    {"name": "tinyllama:1.1b",  "label": "TinyLlama\n1.1B",  "params_b": 1.1},
+    {"name": "phi:latest",      "label": "Phi\n2.7B",         "params_b": 2.7},
+    {"name": "mistral:latest",  "label": "Mistral\n7B",       "params_b": 7.0},
+    {"name": "qwen3.5:0.8b",    "label": "Qwen3.5\n0.8B",    "params_b": 0.8},
+    {"name": "qwen3.5:2b",      "label": "Qwen3.5\n2B",      "params_b": 2.0},
+    {"name": "qwen3.5:4b",      "label": "Qwen3.5\n4B",      "params_b": 4.0},
 ]
 
 # ============================================================
-# TASKS
+# LOAD TASKS FROM JSON
+# 20 battery verification tasks — same domain ensures
+# semantic memory retrieval finds relevant past solutions
+# Each task has 5 keyword groups for step coverage scoring
 # ============================================================
 
-TASKS = [
-    {
-        "task": "Diagnose why a battery pack overheats during high-rate discharge and propose a fix.",
-        "expected_keywords": [
-            ["temperature", "thermal", "heat", "temp"],
-            ["cooling", "cooler", "cool", "dissipation"],
-            ["discharge", "discharging", "c-rate"],
-            ["bms", "battery management", "management system"],
-            ["resistance", "impedance", "internal resistance"]
-        ]
-    },
-    {
-        "task": "Design a verification test plan for a battery cell's cycle life performance.",
-        "expected_keywords": [
-            ["charge", "charging"],
-            ["discharge", "discharging"],
-            ["cycle", "cycling", "cycles"],
-            ["capacity", "degradation", "fade", "retention"],
-            ["voltage", "current", "soc", "state of charge"]
-        ]
-    },
-    {
-        "task": "Identify root cause of voltage imbalance across cells in a battery module.",
-        "expected_keywords": [
-            ["voltage", "imbalance", "volt"],
-            ["cell", "cells"],
-            ["balance", "balancing", "balanced"],
-            ["resistance", "impedance", "internal resistance"],
-            ["bms", "battery management", "inspection"]
-        ]
-    },
-    {
-        "task": "Plan a safety validation procedure for a battery management system (BMS).",
-        "expected_keywords": [
-            ["overvoltage", "over-voltage", "over voltage", "voltage limit", "overcharge"],
-            ["overcurrent", "over-current", "over current", "current limit"],
-            ["temperature", "thermal", "overtemperature", "thermal runaway"],
-            ["protection", "protect", "safety", "fault", "isolation"],
-            ["test", "testing", "validation", "verify", "validate"]
-        ]
-    },
-    {
-        "task": "Evaluate the impact of low temperature on battery capacity and suggest mitigations.",
-        "expected_keywords": [
-            ["temperature", "thermal", "cold", "low temp", "sub-zero"],
-            ["capacity", "degradation", "performance", "retention"],
-            ["electrolyte", "chemistry", "lithium", "electrode", "impedance"],
-            ["heating", "heater", "warm", "thermal management", "preconditioning"],
-            ["mitigation", "strategy", "solution", "insulation", "algorithm"]
-        ]
-    },
-]
+with open(TASKS_FILE) as f:
+    TASKS = json.load(f)
+
+print(f"Loaded {len(TASKS)} tasks from {TASKS_FILE}")
+_cats = _Counter(t.get("category", "unknown") for t in TASKS)
+for cat, count in _cats.items():
+    print(f"  {cat}: {count} tasks")
+print()
 
 # ============================================================
 # EMBEDDING
@@ -220,25 +196,32 @@ def avg(lst):
     return round(sum(lst) / len(lst), 3) if lst else 0.0
 
 # ============================================================
-# STEP 1 — Build cloud semantic memory
-# Run 397B-cloud on all 5 tasks, embed plans, store in ChromaDB
-# Load from JSON if already exists to save time
+# STEP 1 — Build expert semantic memory
+# Run Qwen3.5 9B (expert model) on all 20 battery tasks
+# Embed expert plans into ChromaDB using nomic-embed-text
+# Load from disk if already exists to save time on re-runs
+# Note: 397B-cloud unavailable — 9B used as largest local model
 # ============================================================
 
 def build_cloud_semantic_memory():
     """
-    Loads cloud plans from disk (generated in Exp 2) and embeds them
-    into a ChromaDB collection for semantic retrieval.
+    Generates expert plans using Qwen3.5 9B (expert model) for all 20 tasks
+    and embeds them into a ChromaDB collection for semantic retrieval.
+
+    If expert plans already exist on disk (memory_expert_9b.json),
+    they are loaded directly to save time on re-runs.
+    The expert model (9B) generates higher quality plans than smaller models,
+    which is the key hypothesis being tested in this experiment.
     """
-    # Load existing cloud plans from Exp 2 JSON if available
+    # Load existing expert plans from disk if available (avoids regeneration)
     if os.path.exists(CLOUD_MEMORY_FILE):
         with open(CLOUD_MEMORY_FILE) as f:
             cloud_plans = json.load(f)
-        print(f"✅ Loaded existing cloud plans ({len(cloud_plans)} entries) from {CLOUD_MEMORY_FILE}")
+        print(f"✅ Loaded existing expert plans ({len(cloud_plans)} entries) from {CLOUD_MEMORY_FILE}")
     else:
-        # Generate fresh cloud plans
+        # Generate fresh expert plans using 9B
         print(f"\n{'#'*60}")
-        print(f"STEP 1 — Generating cloud plans using {CLOUD_MODEL}")
+        print(f"STEP 1 — Generating expert plans using {CLOUD_MODEL}")
         print(f"{'#'*60}")
         cloud_plans = []
         for t in TASKS:
@@ -264,8 +247,8 @@ def build_cloud_semantic_memory():
             json.dump(cloud_plans, f, indent=2)
         print(f"\n✅ Cloud plans saved to: {CLOUD_MEMORY_FILE}")
 
-    # Now embed all cloud plans into ChromaDB
-    print(f"\n  Embedding cloud plans into ChromaDB...")
+    # Now embed all expert plans into ChromaDB for semantic retrieval
+    print(f"\n  Embedding expert plans into ChromaDB...")
     client = chromadb.EphemeralClient()
     collection = client.create_collection(
         name="cloud_semantic_memory",
@@ -281,16 +264,16 @@ def build_cloud_semantic_memory():
                 documents=[combined],
                 metadatas=[{"task": entry["task"], "plan": entry["plan"]}]
             )
-    print(f"  ✅ Embedded {collection.count()} cloud plans into ChromaDB")
+    print(f"  ✅ Embedded {collection.count()} expert plans into ChromaDB")
     return collection, cloud_plans
 
 # ============================================================
-# STEP 2 — Retrieve cloud memory semantically
+# STEP 2 — Retrieve expert memory semantically
 # ============================================================
 
 def retrieve_cloud_semantic(task, collection, top_k=2):
     """
-    Retrieve the most semantically similar cloud plans for a given task
+    Retrieve the most semantically similar expert plans for a given task
     using cosine similarity via ChromaDB.
     """
     if collection.count() == 0:
@@ -383,7 +366,7 @@ def prompt_cloud_semantic(task, collection, model_name=""):
 
 def run_small_models(cloud_collection, cloud_plans):
     print(f"\n{'#'*60}")
-    print("STEP 2 — Running small models with cloud semantic memory")
+    print("STEP 2 — Running small models with expert semantic memory injection")
     print(f"{'#'*60}")
 
     results = {}
@@ -499,16 +482,16 @@ def plot_results(results, cloud_plans):
         ax.text(x[i], max(v1, v2) + 0.07, f"{delta:+.2f}",
                 ha="center", fontsize=9, color=col, fontweight="bold")
 
-    # 397B reference line
+    # 9B expert reference line — target that small models aim to match
     ax.axhline(y=cloud_avg, color="#993C1D", linestyle="--", linewidth=1.5, alpha=0.8)
     ax.text(len(SMALL_MODELS) - 0.3, cloud_avg + 0.02,
-            f"397B target ({cloud_avg:.2f})", fontsize=9,
+            f"9B expert target ({cloud_avg:.2f})", fontsize=9,
             color="#993C1D", fontweight="bold")
 
     ax.set_xticks(x)
     ax.set_xticklabels(model_labels, fontsize=9)
     ax.set_ylabel("Step Coverage Score (0-1)", fontsize=11)
-    ax.set_title("Experiment 4 — Cloud Semantic Memory Injection (MemPalace): Can Small Models Match 397B?",
+    ax.set_title("Experiment 4 — Expert Semantic Memory Injection (MemPalace): Can Small Models Match 9B Expert?",
                  fontsize=11, fontweight="bold")
     ax.set_ylim(0, 1.18)
     ax.legend(fontsize=9)
@@ -537,7 +520,7 @@ def plot_results(results, cloud_plans):
     ax.set_xticks(x)
     ax.set_xticklabels(model_labels, fontsize=9)
     ax.set_ylabel("Coverage Improvement", fontsize=11)
-    ax.set_title("Experiment 4 — Coverage Improvement from Cloud Semantic Memory",
+    ax.set_title("Experiment 4 — Coverage Improvement from Expert Semantic Memory Injection",
                  fontsize=12, fontweight="bold")
     ax.grid(axis="y", alpha=0.3)
     plt.tight_layout()
@@ -561,7 +544,7 @@ def plot_results(results, cloud_plans):
     ax.set_xticks(x)
     ax.set_xticklabels(model_labels, fontsize=9)
     ax.set_ylabel("Average Latency (seconds)", fontsize=11)
-    ax.set_title("Experiment 4 — Latency: Baseline vs Cloud Semantic Memory",
+    ax.set_title("Experiment 4 — Latency: Baseline vs Expert Semantic Memory Injection",
                  fontsize=12, fontweight="bold")
     ax.legend(fontsize=9)
     ax.grid(axis="y", alpha=0.3)
@@ -586,7 +569,7 @@ def plot_results(results, cloud_plans):
     ax.set_xticks(x)
     ax.set_xticklabels(model_labels, fontsize=9)
     ax.set_ylabel("Average Token Count", fontsize=11)
-    ax.set_title("Experiment 4 — Token Count: Baseline vs Cloud Semantic Memory",
+    ax.set_title("Experiment 4 — Token Count: Baseline vs Expert Semantic Memory Injection",
                  fontsize=12, fontweight="bold")
     ax.legend(fontsize=9)
     ax.grid(axis="y", alpha=0.3)

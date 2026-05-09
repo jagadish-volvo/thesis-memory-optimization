@@ -1,0 +1,1022 @@
+[
+  {
+    "task": "Diagnose why a hydraulic press in an automotive stamping plant is producing inconsistent force output and propose a corrective action.",
+    "category": "diagnosis",
+    "expected_keywords": [
+      [
+        "pressure",
+        "hydraulic pressure",
+        "force",
+        "psi",
+        "bar"
+      ],
+      [
+        "valve",
+        "control valve",
+        "relief valve",
+        "solenoid"
+      ],
+      [
+        "pump",
+        "hydraulic pump",
+        "flow rate",
+        "displacement"
+      ],
+      [
+        "seal",
+        "leakage",
+        "leak",
+        "fluid loss",
+        "bypass"
+      ],
+      [
+        "sensor",
+        "transducer",
+        "measurement",
+        "calibration",
+        "feedback"
+      ]
+    ]
+  },
+  {
+    "task": "Identify the root cause of excessive vibration in a centrifugal pump used in a chemical processing plant and recommend a fix.",
+    "category": "diagnosis",
+    "expected_keywords": [
+      [
+        "vibration",
+        "oscillation",
+        "amplitude",
+        "frequency"
+      ],
+      [
+        "bearing",
+        "bearing wear",
+        "rolling element",
+        "lubrication"
+      ],
+      [
+        "impeller",
+        "rotor",
+        "imbalance",
+        "misalignment",
+        "cavitation"
+      ],
+      [
+        "shaft",
+        "coupling",
+        "alignment",
+        "runout"
+      ],
+      [
+        "foundation",
+        "mounting",
+        "resonance",
+        "structural",
+        "baseplate"
+      ]
+    ]
+  },
+  {
+    "task": "Diagnose why a CNC machining center is producing parts with dimensional deviations outside tolerance and propose corrective actions.",
+    "category": "diagnosis",
+    "expected_keywords": [
+      [
+        "tolerance",
+        "dimension",
+        "deviation",
+        "accuracy",
+        "precision"
+      ],
+      [
+        "tool",
+        "tool wear",
+        "cutting tool",
+        "insert",
+        "deflection"
+      ],
+      [
+        "spindle",
+        "runout",
+        "thermal",
+        "expansion",
+        "compensation"
+      ],
+      [
+        "fixture",
+        "clamping",
+        "workholding",
+        "datum",
+        "reference"
+      ],
+      [
+        "measurement",
+        "inspection",
+        "gauge",
+        "cmm",
+        "probing"
+      ]
+    ]
+  },
+  {
+    "task": "Identify the root cause of frequent conveyor belt slippage in a mining material handling system and propose a solution.",
+    "category": "diagnosis",
+    "expected_keywords": [
+      [
+        "tension",
+        "belt tension",
+        "take-up",
+        "slack",
+        "sag"
+      ],
+      [
+        "drive",
+        "drive pulley",
+        "motor",
+        "torque",
+        "slip"
+      ],
+      [
+        "load",
+        "overload",
+        "material",
+        "capacity",
+        "distribution"
+      ],
+      [
+        "friction",
+        "surface",
+        "lagging",
+        "traction",
+        "wet"
+      ],
+      [
+        "alignment",
+        "tracking",
+        "idler",
+        "training",
+        "guide"
+      ]
+    ]
+  },
+  {
+    "task": "Diagnose why a robotic welding cell is producing inconsistent weld quality with porosity defects and recommend corrective measures.",
+    "category": "diagnosis",
+    "expected_keywords": [
+      [
+        "porosity",
+        "defect",
+        "weld quality",
+        "discontinuity",
+        "void"
+      ],
+      [
+        "gas",
+        "shielding gas",
+        "contamination",
+        "moisture",
+        "flow rate"
+      ],
+      [
+        "wire",
+        "electrode",
+        "feed",
+        "contact tip",
+        "consumable"
+      ],
+      [
+        "parameter",
+        "voltage",
+        "current",
+        "travel speed",
+        "heat input"
+      ],
+      [
+        "surface",
+        "cleanliness",
+        "preparation",
+        "oxide",
+        "contamination"
+      ]
+    ]
+  },
+  {
+    "task": "Design a predictive maintenance system for a fleet of industrial air compressors in a manufacturing facility.",
+    "category": "design",
+    "expected_keywords": [
+      [
+        "sensor",
+        "monitoring",
+        "vibration sensor",
+        "temperature sensor",
+        "pressure sensor"
+      ],
+      [
+        "data",
+        "data collection",
+        "acquisition",
+        "logging",
+        "historian"
+      ],
+      [
+        "algorithm",
+        "machine learning",
+        "model",
+        "prediction",
+        "analytics"
+      ],
+      [
+        "threshold",
+        "alarm",
+        "alert",
+        "notification",
+        "trigger"
+      ],
+      [
+        "maintenance",
+        "schedule",
+        "intervention",
+        "replacement",
+        "downtime"
+      ]
+    ]
+  },
+  {
+    "task": "Design a quality control system for detecting surface defects in steel sheets on a continuous rolling mill production line.",
+    "category": "design",
+    "expected_keywords": [
+      [
+        "camera",
+        "vision",
+        "imaging",
+        "optical",
+        "sensor"
+      ],
+      [
+        "detection",
+        "defect",
+        "classification",
+        "inspection",
+        "identification"
+      ],
+      [
+        "lighting",
+        "illumination",
+        "contrast",
+        "resolution",
+        "frame rate"
+      ],
+      [
+        "algorithm",
+        "processing",
+        "neural network",
+        "threshold",
+        "segmentation"
+      ],
+      [
+        "rejection",
+        "sorting",
+        "actuator",
+        "diverter",
+        "marking"
+      ]
+    ]
+  },
+  {
+    "task": "Design an automated inventory management system for a warehouse using IoT sensors and RFID technology.",
+    "category": "design",
+    "expected_keywords": [
+      [
+        "rfid",
+        "tag",
+        "reader",
+        "barcode",
+        "identification"
+      ],
+      [
+        "sensor",
+        "iot",
+        "gateway",
+        "connectivity",
+        "network"
+      ],
+      [
+        "inventory",
+        "stock",
+        "tracking",
+        "location",
+        "quantity"
+      ],
+      [
+        "database",
+        "erp",
+        "integration",
+        "synchronization",
+        "real-time"
+      ],
+      [
+        "alert",
+        "reorder",
+        "threshold",
+        "replenishment",
+        "notification"
+      ]
+    ]
+  },
+  {
+    "task": "Design a closed-loop temperature control system for an industrial furnace used in heat treatment of steel components.",
+    "category": "design",
+    "expected_keywords": [
+      [
+        "temperature",
+        "setpoint",
+        "control",
+        "feedback",
+        "regulation"
+      ],
+      [
+        "sensor",
+        "thermocouple",
+        "pyrometer",
+        "rtd",
+        "measurement"
+      ],
+      [
+        "pid",
+        "controller",
+        "gain",
+        "tuning",
+        "proportional"
+      ],
+      [
+        "actuator",
+        "burner",
+        "heater",
+        "valve",
+        "fuel"
+      ],
+      [
+        "uniformity",
+        "distribution",
+        "zone",
+        "profile",
+        "ramp"
+      ]
+    ]
+  },
+  {
+    "task": "Design a condition monitoring system for gearboxes in a wind turbine farm to detect early signs of gear tooth failure.",
+    "category": "design",
+    "expected_keywords": [
+      [
+        "vibration",
+        "acceleration",
+        "spectrum",
+        "frequency",
+        "harmonic"
+      ],
+      [
+        "gear",
+        "tooth",
+        "mesh frequency",
+        "sidebands",
+        "modulation"
+      ],
+      [
+        "oil",
+        "lubrication",
+        "debris",
+        "particle",
+        "contamination"
+      ],
+      [
+        "threshold",
+        "baseline",
+        "trend",
+        "anomaly",
+        "deviation"
+      ],
+      [
+        "alert",
+        "maintenance",
+        "replacement",
+        "prediction",
+        "remaining life"
+      ]
+    ]
+  },
+  {
+    "task": "Plan a comprehensive shutdown maintenance procedure for a steam turbine in a power generation plant.",
+    "category": "planning",
+    "expected_keywords": [
+      [
+        "isolation",
+        "lockout",
+        "tagout",
+        "loto",
+        "energy isolation"
+      ],
+      [
+        "inspection",
+        "visual",
+        "ndt",
+        "non-destructive",
+        "ultrasonic"
+      ],
+      [
+        "clearance",
+        "permit",
+        "work permit",
+        "authorization",
+        "safety"
+      ],
+      [
+        "component",
+        "blade",
+        "seal",
+        "bearing",
+        "coupling"
+      ],
+      [
+        "testing",
+        "commissioning",
+        "verification",
+        "performance",
+        "acceptance"
+      ]
+    ]
+  },
+  {
+    "task": "Plan a validation procedure for a newly installed automated assembly line for automotive engine components.",
+    "category": "planning",
+    "expected_keywords": [
+      [
+        "validation",
+        "qualification",
+        "acceptance",
+        "criteria",
+        "specification"
+      ],
+      [
+        "cycle time",
+        "throughput",
+        "capacity",
+        "rate",
+        "output"
+      ],
+      [
+        "quality",
+        "defect",
+        "reject",
+        "cpk",
+        "capability"
+      ],
+      [
+        "safety",
+        "interlock",
+        "guard",
+        "emergency stop",
+        "risk"
+      ],
+      [
+        "documentation",
+        "record",
+        "traceability",
+        "sign-off",
+        "approval"
+      ]
+    ]
+  },
+  {
+    "task": "Plan a cybersecurity assessment procedure for industrial control systems in a chemical manufacturing plant.",
+    "category": "planning",
+    "expected_keywords": [
+      [
+        "vulnerability",
+        "assessment",
+        "penetration",
+        "risk",
+        "threat"
+      ],
+      [
+        "network",
+        "firewall",
+        "segmentation",
+        "dmz",
+        "access control"
+      ],
+      [
+        "scada",
+        "plc",
+        "hmi",
+        "ics",
+        "ot"
+      ],
+      [
+        "patch",
+        "update",
+        "firmware",
+        "hardening",
+        "configuration"
+      ],
+      [
+        "incident",
+        "response",
+        "recovery",
+        "backup",
+        "continuity"
+      ]
+    ]
+  },
+  {
+    "task": "Plan an energy audit procedure for a large-scale food processing facility to identify opportunities for energy reduction.",
+    "category": "planning",
+    "expected_keywords": [
+      [
+        "energy",
+        "consumption",
+        "meter",
+        "measurement",
+        "monitoring"
+      ],
+      [
+        "baseline",
+        "benchmark",
+        "kpi",
+        "efficiency",
+        "performance"
+      ],
+      [
+        "motor",
+        "drive",
+        "vfd",
+        "compressor",
+        "refrigeration"
+      ],
+      [
+        "heat",
+        "recovery",
+        "waste heat",
+        "insulation",
+        "loss"
+      ],
+      [
+        "saving",
+        "reduction",
+        "opportunity",
+        "recommendation",
+        "roi"
+      ]
+    ]
+  },
+  {
+    "task": "Plan a spare parts management strategy for critical rotating equipment in a petrochemical refinery.",
+    "category": "planning",
+    "expected_keywords": [
+      [
+        "critical",
+        "criticality",
+        "classification",
+        "ranking",
+        "priority"
+      ],
+      [
+        "inventory",
+        "stock",
+        "quantity",
+        "reorder",
+        "lead time"
+      ],
+      [
+        "supplier",
+        "vendor",
+        "procurement",
+        "sourcing",
+        "availability"
+      ],
+      [
+        "storage",
+        "warehouse",
+        "preservation",
+        "shelf life",
+        "condition"
+      ],
+      [
+        "failure",
+        "reliability",
+        "mtbf",
+        "obsolescence",
+        "lifecycle"
+      ]
+    ]
+  },
+  {
+    "task": "Evaluate the overall equipment effectiveness of a bottling line in a beverage manufacturing plant and propose improvements.",
+    "category": "evaluation",
+    "expected_keywords": [
+      [
+        "oee",
+        "availability",
+        "performance",
+        "quality",
+        "effectiveness"
+      ],
+      [
+        "downtime",
+        "planned",
+        "unplanned",
+        "breakdown",
+        "stoppage"
+      ],
+      [
+        "speed",
+        "rate",
+        "throughput",
+        "cycle time",
+        "output"
+      ],
+      [
+        "defect",
+        "reject",
+        "rework",
+        "scrap",
+        "yield"
+      ],
+      [
+        "improvement",
+        "kaizen",
+        "lean",
+        "bottleneck",
+        "loss"
+      ]
+    ]
+  },
+  {
+    "task": "Evaluate the environmental impact of switching from hydraulic to electric actuators in an industrial press line.",
+    "category": "evaluation",
+    "expected_keywords": [
+      [
+        "energy",
+        "consumption",
+        "efficiency",
+        "power",
+        "electricity"
+      ],
+      [
+        "hydraulic fluid",
+        "oil",
+        "leak",
+        "contamination",
+        "disposal"
+      ],
+      [
+        "carbon",
+        "emission",
+        "footprint",
+        "co2",
+        "environmental"
+      ],
+      [
+        "noise",
+        "heat",
+        "thermal",
+        "pollution",
+        "reduction"
+      ],
+      [
+        "lifecycle",
+        "cost",
+        "maintenance",
+        "reliability",
+        "comparison"
+      ]
+    ]
+  },
+  {
+    "task": "Evaluate the performance of a compressed air system in a manufacturing plant and identify energy saving opportunities.",
+    "category": "evaluation",
+    "expected_keywords": [
+      [
+        "pressure",
+        "supply pressure",
+        "demand",
+        "distribution",
+        "drop"
+      ],
+      [
+        "leak",
+        "leakage",
+        "loss",
+        "detection",
+        "repair"
+      ],
+      [
+        "compressor",
+        "efficiency",
+        "specific power",
+        "cfm",
+        "flow"
+      ],
+      [
+        "storage",
+        "receiver",
+        "tank",
+        "buffer",
+        "demand management"
+      ],
+      [
+        "saving",
+        "reduction",
+        "audit",
+        "measurement",
+        "opportunity"
+      ]
+    ]
+  },
+  {
+    "task": "Evaluate the reliability of a safety instrumented system in an offshore oil platform and recommend improvements.",
+    "category": "evaluation",
+    "expected_keywords": [
+      [
+        "sil",
+        "safety integrity level",
+        "reliability",
+        "pfd",
+        "probability"
+      ],
+      [
+        "sensor",
+        "transmitter",
+        "voting",
+        "redundancy",
+        "diversity"
+      ],
+      [
+        "logic solver",
+        "plc",
+        "safety controller",
+        "sis",
+        "sif"
+      ],
+      [
+        "proof test",
+        "inspection",
+        "testing frequency",
+        "coverage",
+        "interval"
+      ],
+      [
+        "failure",
+        "dangerous",
+        "spurious",
+        "demand",
+        "rate"
+      ]
+    ]
+  },
+  {
+    "task": "Evaluate the impact of implementing a digital twin for a rotary kiln in a cement manufacturing plant.",
+    "category": "evaluation",
+    "expected_keywords": [
+      [
+        "digital twin",
+        "simulation",
+        "model",
+        "virtual",
+        "replica"
+      ],
+      [
+        "temperature",
+        "profile",
+        "zone",
+        "distribution",
+        "measurement"
+      ],
+      [
+        "process",
+        "optimization",
+        "parameter",
+        "setpoint",
+        "control"
+      ],
+      [
+        "prediction",
+        "anomaly",
+        "detection",
+        "maintenance",
+        "downtime"
+      ],
+      [
+        "data",
+        "integration",
+        "sensor",
+        "real-time",
+        "feedback"
+      ]
+    ]
+  },
+  {
+    "task": "Plan a safety validation procedure for a new automated palletizing robot installed in a logistics warehouse.",
+    "category": "safety",
+    "expected_keywords": [
+      [
+        "risk",
+        "assessment",
+        "hazard",
+        "identification",
+        "evaluation"
+      ],
+      [
+        "guard",
+        "fence",
+        "barrier",
+        "light curtain",
+        "safety zone"
+      ],
+      [
+        "emergency stop",
+        "e-stop",
+        "interlock",
+        "safety relay",
+        "circuit"
+      ],
+      [
+        "speed",
+        "force",
+        "collaborative",
+        "iso",
+        "standard"
+      ],
+      [
+        "test",
+        "validation",
+        "commissioning",
+        "verification",
+        "sign-off"
+      ]
+    ]
+  },
+  {
+    "task": "Design a lockout tagout procedure for maintenance of a high-voltage electrical switchgear in an industrial facility.",
+    "category": "safety",
+    "expected_keywords": [
+      [
+        "lockout",
+        "tagout",
+        "loto",
+        "isolation",
+        "energy"
+      ],
+      [
+        "voltage",
+        "electrical",
+        "hazardous",
+        "arc flash",
+        "shock"
+      ],
+      [
+        "procedure",
+        "step",
+        "sequence",
+        "verification",
+        "permit"
+      ],
+      [
+        "device",
+        "lock",
+        "tag",
+        "hasp",
+        "key"
+      ],
+      [
+        "test",
+        "verify",
+        "zero energy",
+        "de-energize",
+        "confirm"
+      ]
+    ]
+  },
+  {
+    "task": "Develop a fire and gas detection system validation procedure for a liquefied natural gas processing terminal.",
+    "category": "safety",
+    "expected_keywords": [
+      [
+        "detector",
+        "sensor",
+        "gas",
+        "fire",
+        "flame"
+      ],
+      [
+        "alarm",
+        "alert",
+        "notification",
+        "panel",
+        "control room"
+      ],
+      [
+        "test",
+        "functional",
+        "simulation",
+        "injection",
+        "response time"
+      ],
+      [
+        "coverage",
+        "zone",
+        "area",
+        "location",
+        "placement"
+      ],
+      [
+        "shutdown",
+        "action",
+        "response",
+        "isolation",
+        "emergency"
+      ]
+    ]
+  },
+  {
+    "task": "Plan a fall protection and working at height safety procedure for maintenance of wind turbine nacelles.",
+    "category": "safety",
+    "expected_keywords": [
+      [
+        "fall",
+        "arrest",
+        "protection",
+        "harness",
+        "anchor"
+      ],
+      [
+        "height",
+        "nacelle",
+        "tower",
+        "climb",
+        "access"
+      ],
+      [
+        "permit",
+        "work permit",
+        "authorization",
+        "rescue",
+        "plan"
+      ],
+      [
+        "equipment",
+        "ppe",
+        "helmet",
+        "gloves",
+        "inspection"
+      ],
+      [
+        "weather",
+        "wind speed",
+        "condition",
+        "limit",
+        "abort"
+      ]
+    ]
+  },
+  {
+    "task": "Develop a hazardous material handling and spill response procedure for a chemical warehouse storing corrosive acids.",
+    "category": "safety",
+    "expected_keywords": [
+      [
+        "hazardous",
+        "corrosive",
+        "acid",
+        "chemical",
+        "material"
+      ],
+      [
+        "ppe",
+        "protective",
+        "gloves",
+        "goggles",
+        "suit"
+      ],
+      [
+        "spill",
+        "containment",
+        "bund",
+        "neutralization",
+        "cleanup"
+      ],
+      [
+        "storage",
+        "segregation",
+        "compatibility",
+        "ventilation",
+        "label"
+      ],
+      [
+        "emergency",
+        "response",
+        "first aid",
+        "evacuation",
+        "msds"
+      ]
+    ]
+  }
+]
