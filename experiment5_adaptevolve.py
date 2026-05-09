@@ -1,28 +1,36 @@
 """
 Experiment 5 — AdaptEvolve: Confidence-Based Model Routing
 ===========================================================
-Implements adaptive LLM selection inspired by AdaptEvolve paper.
+Implements adaptive LLM selection inspired by the AdaptEvolve paper.
 Routes queries between small and large models based on token-level
-confidence scores (logprobs) — the same approach used in the paper.
+confidence scores (logprobs) — pure confidence-based routing with
+no hardcoded rules per task category.
 
-Two conditions compared across 100 industrial tasks:
+Two conditions compared across 200 diverse industrial tasks:
 
 Condition 1 — BASELINE (Fixed large model):
-  Always use 397B-cloud regardless of task complexity.
-  Maximum quality, maximum cost.
+  Always use Qwen3.5 9B regardless of task complexity.
+  Maximum quality, maximum compute cost.
+  Note: 397B-cloud unavailable due to subscription restrictions.
 
-Condition 2 — AdaptEvolve (Confidence cascade):
+Condition 2 — AdaptEvolve (Confidence-based cascade):
   Start with smallest model (TinyLlama 1.1B).
   Calculate mean logprob confidence from generated tokens.
-  If confidence >= threshold → accept answer, stop cascade.
-  If confidence < threshold → escalate to next model.
-  Cascade: TinyLlama → Phi → Mistral → Qwen3.5 0.8B → 2B → 4B → 9B → 397B
+  If confidence >= threshold (0.65) → accept answer, stop cascade.
+  If confidence < threshold → escalate to next larger model.
+  Cascade: TinyLlama 1.1B → Phi 2.7B → Mistral 7B → Qwen3.5 0.8B → 2B → 4B → 9B
+
+Threshold calibration (empirical, 3 runs):
+  0.63 → escalation 67%, latency saving +46%, no Qwen3.5 participation
+  0.68 → escalation 92%, latency saving -7% (worse than baseline)
+  0.65 → escalation 80%, latency saving +27%, Qwen3.5 participates ✅ FINAL
 
 KPIs:
-  - Step coverage quality  : was the final answer good?
-  - Average latency        : how fast was the system?
-  - Escalation rate        : how often was a larger model needed?
-  - Model usage distribution: which models handled which tasks?
+  - Response quality score  : proxy metric (word count + keywords + structure)
+  - Average latency         : total time including all escalation steps
+  - Escalation rate         : percentage of tasks needing more than one model
+  - Model usage distribution: which models handled which tasks
+  - Latency saving          : percentage improvement vs always using 9B
 """
 
 import requests
@@ -240,7 +248,7 @@ def avg(lst):
     return round(sum(lst) / len(lst), 3) if lst else 0.0
 
 # ============================================================
-# CONDITION 1 — BASELINE: Always use 397B-cloud
+# CONDITION 1 — BASELINE: Always qwen3.5 9B
 # ============================================================
 
 print("=" * 60)
