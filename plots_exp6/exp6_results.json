@@ -1,0 +1,430 @@
+{
+  "experiment": "Experiment 6 \u2014 RL Adaptive Coordination",
+  "dataset": "c:\\Users\\A547142\\Desktop\\module optimization\\workflow_scenarios.json",
+  "note": "KPI 1 \u2014 Decision quality = average reward per task. Measures how well the orchestration layer makes routing decisions. Higher = better decisions. KPI 2 \u2014 Resource utilisation = load balance across agents. KPI 3 \u2014 Avg task wait time = queue waiting time per task.",
+  "config": {
+    "num_agents": 5,
+    "num_scenarios": 10,
+    "tasks_per_scenario": 200,
+    "training_passes": 500,
+    "max_queue": 8,
+    "rl_hyperparameters": {
+      "learning_rate": 0.15,
+      "discount": 0.95,
+      "epsilon_start": 1.0,
+      "epsilon_min": 0.05,
+      "epsilon_decay": 0.9908
+    }
+  },
+  "static_baseline": {
+    "decision_quality_mean": 0.9971,
+    "decision_quality_std": 0.8249,
+    "resource_util_mean": 0.7195,
+    "resource_util_std": 0.1281,
+    "avg_wait_time_mean": 0.537,
+    "avg_wait_time_std": 0.2519,
+    "per_scenario": [
+      {
+        "scenario_id": 0,
+        "scenario_name": "Uniform Distribution",
+        "metrics": {
+          "orch_total_time_ms": 0.0372,
+          "avg_decision_lat_ms": 0.000186,
+          "resource_utilisation": 0.925,
+          "avg_wait_time": 0.194,
+          "tasks_per_agent": [
+            37,
+            44,
+            35,
+            33,
+            51
+          ]
+        },
+        "reward": 345.8,
+        "quality": 1.729
+      },
+      {
+        "scenario_id": 1,
+        "scenario_name": "Execution Heavy (Bottleneck)",
+        "metrics": {
+          "orch_total_time_ms": 0.0326,
+          "avg_decision_lat_ms": 0.000163,
+          "resource_utilisation": 0.535,
+          "avg_wait_time": 0.938,
+          "tasks_per_agent": [
+            5,
+            21,
+            133,
+            27,
+            14
+          ]
+        },
+        "reward": -102.01,
+        "quality": -0.51
+      },
+      {
+        "scenario_id": 2,
+        "scenario_name": "High Priority Surge",
+        "metrics": {
+          "orch_total_time_ms": 0.0307,
+          "avg_decision_lat_ms": 0.000154,
+          "resource_utilisation": 0.56,
+          "avg_wait_time": 0.777,
+          "tasks_per_agent": [
+            11,
+            17,
+            128,
+            26,
+            18
+          ]
+        },
+        "reward": -105.59,
+        "quality": -0.5279
+      },
+      {
+        "scenario_id": 3,
+        "scenario_name": "Planning Heavy",
+        "metrics": {
+          "orch_total_time_ms": 0.0363,
+          "avg_decision_lat_ms": 0.000181,
+          "resource_utilisation": 0.74,
+          "avg_wait_time": 0.423,
+          "tasks_per_agent": [
+            92,
+            28,
+            30,
+            26,
+            24
+          ]
+        },
+        "reward": 282.16,
+        "quality": 1.4108
+      },
+      {
+        "scenario_id": 4,
+        "scenario_name": "Monitoring Heavy",
+        "metrics": {
+          "orch_total_time_ms": 0.0305,
+          "avg_decision_lat_ms": 0.000153,
+          "resource_utilisation": 0.695,
+          "avg_wait_time": 0.664,
+          "tasks_per_agent": [
+            7,
+            20,
+            32,
+            97,
+            44
+          ]
+        },
+        "reward": 243.25,
+        "quality": 1.2163
+      },
+      {
+        "scenario_id": 5,
+        "scenario_name": "Mixed Moderate Load",
+        "metrics": {
+          "orch_total_time_ms": 0.0926,
+          "avg_decision_lat_ms": 0.000463,
+          "resource_utilisation": 0.755,
+          "avg_wait_time": 0.405,
+          "tasks_per_agent": [
+            30,
+            16,
+            86,
+            43,
+            25
+          ]
+        },
+        "reward": 295.52,
+        "quality": 1.4776
+      },
+      {
+        "scenario_id": 6,
+        "scenario_name": "Burst Pattern",
+        "metrics": {
+          "orch_total_time_ms": 0.0495,
+          "avg_decision_lat_ms": 0.000247,
+          "resource_utilisation": 0.675,
+          "avg_wait_time": 0.725,
+          "tasks_per_agent": [
+            9,
+            25,
+            105,
+            38,
+            23
+          ]
+        },
+        "reward": 269.2,
+        "quality": 1.346
+      },
+      {
+        "scenario_id": 7,
+        "scenario_name": "Escalating Load",
+        "metrics": {
+          "orch_total_time_ms": 0.0295,
+          "avg_decision_lat_ms": 0.000148,
+          "resource_utilisation": 0.595,
+          "avg_wait_time": 0.737,
+          "tasks_per_agent": [
+            13,
+            26,
+            121,
+            23,
+            17
+          ]
+        },
+        "reward": 104.41,
+        "quality": 0.5221
+      },
+      {
+        "scenario_id": 8,
+        "scenario_name": "Random Variation 1",
+        "metrics": {
+          "orch_total_time_ms": 0.0238,
+          "avg_decision_lat_ms": 0.000119,
+          "resource_utilisation": 0.81,
+          "avg_wait_time": 0.343,
+          "tasks_per_agent": [
+            58,
+            48,
+            12,
+            52,
+            30
+          ]
+        },
+        "reward": 314.64,
+        "quality": 1.5732
+      },
+      {
+        "scenario_id": 9,
+        "scenario_name": "Random Variation 2",
+        "metrics": {
+          "orch_total_time_ms": 0.035,
+          "avg_decision_lat_ms": 0.000175,
+          "resource_utilisation": 0.905,
+          "avg_wait_time": 0.164,
+          "tasks_per_agent": [
+            55,
+            35,
+            44,
+            31,
+            35
+          ]
+        },
+        "reward": 346.8,
+        "quality": 1.734
+      }
+    ]
+  },
+  "rl_optimised": {
+    "q_table_states": 7079,
+    "decision_quality_mean": 1.2766,
+    "decision_quality_std": 0.1053,
+    "resource_util_mean": 0.8495,
+    "resource_util_std": 0.0597,
+    "avg_wait_time_mean": 0.3166,
+    "avg_wait_time_std": 0.1003,
+    "per_scenario": [
+      {
+        "scenario_id": 0,
+        "scenario_name": "Uniform Distribution",
+        "metrics": {
+          "orch_total_time_ms": 0.2496,
+          "avg_decision_lat_ms": 0.001248,
+          "resource_utilisation": 0.94,
+          "avg_wait_time": 0.349,
+          "tasks_per_agent": [
+            41,
+            48,
+            36,
+            32,
+            43
+          ]
+        },
+        "reward": 280.42,
+        "quality": 1.4021
+      },
+      {
+        "scenario_id": 1,
+        "scenario_name": "Execution Heavy (Bottleneck)",
+        "metrics": {
+          "orch_total_time_ms": 0.2517,
+          "avg_decision_lat_ms": 0.001258,
+          "resource_utilisation": 0.8,
+          "avg_wait_time": 0.355,
+          "tasks_per_agent": [
+            31,
+            29,
+            80,
+            28,
+            32
+          ]
+        },
+        "reward": 208.74,
+        "quality": 1.0437
+      },
+      {
+        "scenario_id": 2,
+        "scenario_name": "High Priority Surge",
+        "metrics": {
+          "orch_total_time_ms": 0.2352,
+          "avg_decision_lat_ms": 0.001176,
+          "resource_utilisation": 0.77,
+          "avg_wait_time": 0.315,
+          "tasks_per_agent": [
+            34,
+            22,
+            86,
+            27,
+            31
+          ]
+        },
+        "reward": 246.87,
+        "quality": 1.2344
+      },
+      {
+        "scenario_id": 3,
+        "scenario_name": "Planning Heavy",
+        "metrics": {
+          "orch_total_time_ms": 0.258,
+          "avg_decision_lat_ms": 0.00129,
+          "resource_utilisation": 0.865,
+          "avg_wait_time": 0.413,
+          "tasks_per_agent": [
+            67,
+            32,
+            36,
+            27,
+            38
+          ]
+        },
+        "reward": 262.26,
+        "quality": 1.3113
+      },
+      {
+        "scenario_id": 4,
+        "scenario_name": "Monitoring Heavy",
+        "metrics": {
+          "orch_total_time_ms": 0.2766,
+          "avg_decision_lat_ms": 0.001383,
+          "resource_utilisation": 0.87,
+          "avg_wait_time": 0.117,
+          "tasks_per_agent": [
+            27,
+            27,
+            40,
+            66,
+            40
+          ]
+        },
+        "reward": 276.83,
+        "quality": 1.3842
+      },
+      {
+        "scenario_id": 5,
+        "scenario_name": "Mixed Moderate Load",
+        "metrics": {
+          "orch_total_time_ms": 0.2716,
+          "avg_decision_lat_ms": 0.001358,
+          "resource_utilisation": 0.865,
+          "avg_wait_time": 0.214,
+          "tasks_per_agent": [
+            40,
+            24,
+            67,
+            40,
+            29
+          ]
+        },
+        "reward": 257.73,
+        "quality": 1.2887
+      },
+      {
+        "scenario_id": 6,
+        "scenario_name": "Burst Pattern",
+        "metrics": {
+          "orch_total_time_ms": 0.2492,
+          "avg_decision_lat_ms": 0.001246,
+          "resource_utilisation": 0.805,
+          "avg_wait_time": 0.471,
+          "tasks_per_agent": [
+            32,
+            21,
+            79,
+            35,
+            33
+          ]
+        },
+        "reward": 246.04,
+        "quality": 1.2302
+      },
+      {
+        "scenario_id": 7,
+        "scenario_name": "Escalating Load",
+        "metrics": {
+          "orch_total_time_ms": 0.235,
+          "avg_decision_lat_ms": 0.001175,
+          "resource_utilisation": 0.76,
+          "avg_wait_time": 0.319,
+          "tasks_per_agent": [
+            29,
+            29,
+            88,
+            21,
+            33
+          ]
+        },
+        "reward": 245.95,
+        "quality": 1.2298
+      },
+      {
+        "scenario_id": 8,
+        "scenario_name": "Random Variation 1",
+        "metrics": {
+          "orch_total_time_ms": 0.2458,
+          "avg_decision_lat_ms": 0.001229,
+          "resource_utilisation": 0.895,
+          "avg_wait_time": 0.391,
+          "tasks_per_agent": [
+            45,
+            50,
+            26,
+            46,
+            33
+          ]
+        },
+        "reward": 245.3,
+        "quality": 1.2265
+      },
+      {
+        "scenario_id": 9,
+        "scenario_name": "Random Variation 2",
+        "metrics": {
+          "orch_total_time_ms": 0.3239,
+          "avg_decision_lat_ms": 0.00162,
+          "resource_utilisation": 0.925,
+          "avg_wait_time": 0.222,
+          "tasks_per_agent": [
+            50,
+            39,
+            45,
+            28,
+            38
+          ]
+        },
+        "reward": 283.15,
+        "quality": 1.4158
+      }
+    ]
+  },
+  "rq3_improvements": {
+    "decision_quality_pct": 28.0,
+    "resource_util_pct": 18.1,
+    "avg_wait_time_pct": 41.0
+  },
+  "orchestration_learning_curve": {
+    "reward_start": 54.6,
+    "reward_final": 246.9,
+    "reward_improvement": 352.4
+  }
+}

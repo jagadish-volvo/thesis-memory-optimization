@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "title": "Synthetic Workflow Execution Dataset",
+    "thesis": "PA2534 \u2014 Performance Optimization of Agentic Automation",
+    "student": "Mani Prabhu Jagadish Vaddiparthi",
+    "institution": "Blekinge Institute of Technology (BTH)",
+    "company": "Volvo Group",
+    "purpose": "RL-based adaptive coordination evaluation",
+    "random_seed": 42,
+    "num_scenarios": 10,
+    "tasks_per_scenario": 200,
+    "total_tasks": 2000,
+    "inter_arrival_time_seconds": 1.5,
+    "task_types": {
+      "0": "planning",
+      "1": "scheduling",
+      "2": "execution",
+      "3": "monitoring",
+      "4": "reporting"
+    },
+    "priority_levels": {
+      "0": "low",
+      "1": "medium",
+      "2": "high"
+    },
+    "agent_specialisation": {
+      "Agent 0 Planning": "specialist in planning tasks",
+      "Agent 1 Scheduling": "specialist in scheduling tasks",
+      "Agent 2 Execution": "specialist in execution tasks",
+      "Agent 3 Monitoring": "specialist in monitoring tasks",
+      "Agent 4 Reporting": "specialist in reporting tasks"
+    },
+    "processing_times": {
+      "specialist_agent_seconds": 2,
+      "non_specialist_agent_seconds": 5,
+      "justification": "Specialist agents process primary task type at 2.5x speed reflecting productivity advantage of specialisation [Wooldridge 2009, Multi-Agent Systems]"
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": 0,
+      "scenario_name": "Uniform Distribution",
+      "description": "All task types arrive equally \u2014 balanced workload baseline",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 18.5,
+        "scheduling": 22.0,
+        "execution": 17.5,
+        "monitoring": 16.5,
+        "reporting": 25.5
+      },
+      "priority_distribution": {
+        "low": 36.5,
+        "medium": 31.0,
+        "high": 32.5
+      }
+    },
+    {
+      "scenario_id": 1,
+      "scenario_name": "Execution Heavy (Bottleneck)",
+      "description": "60% execution tasks \u2014 primary bottleneck scenario from thesis \u00a71.1",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 2.5,
+        "scheduling": 10.5,
+        "execution": 66.5,
+        "monitoring": 13.5,
+        "reporting": 7.0
+      },
+      "priority_distribution": {
+        "low": 30.0,
+        "medium": 50.0,
+        "high": 20.0
+      }
+    },
+    {
+      "scenario_id": 2,
+      "scenario_name": "High Priority Surge",
+      "description": "40% high priority tasks \u2014 urgent verification deadline",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 5.5,
+        "scheduling": 8.5,
+        "execution": 64.0,
+        "monitoring": 13.0,
+        "reporting": 9.0
+      },
+      "priority_distribution": {
+        "low": 24.5,
+        "medium": 36.0,
+        "high": 39.5
+      }
+    },
+    {
+      "scenario_id": 3,
+      "scenario_name": "Planning Heavy",
+      "description": "50% planning tasks \u2014 early project phase simulation",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 46.0,
+        "scheduling": 14.0,
+        "execution": 15.0,
+        "monitoring": 13.0,
+        "reporting": 12.0
+      },
+      "priority_distribution": {
+        "low": 26.0,
+        "medium": 52.5,
+        "high": 21.5
+      }
+    },
+    {
+      "scenario_id": 4,
+      "scenario_name": "Monitoring Heavy",
+      "description": "50% monitoring tasks \u2014 active testing phase simulation",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 3.5,
+        "scheduling": 10.0,
+        "execution": 16.0,
+        "monitoring": 48.5,
+        "reporting": 22.0
+      },
+      "priority_distribution": {
+        "low": 34.5,
+        "medium": 41.0,
+        "high": 24.5
+      }
+    },
+    {
+      "scenario_id": 5,
+      "scenario_name": "Mixed Moderate Load",
+      "description": "Realistic distribution \u2014 typical day-to-day workflow",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 15.0,
+        "scheduling": 8.0,
+        "execution": 43.0,
+        "monitoring": 21.5,
+        "reporting": 12.5
+      },
+      "priority_distribution": {
+        "low": 40.0,
+        "medium": 44.0,
+        "high": 16.0
+      }
+    },
+    {
+      "scenario_id": 6,
+      "scenario_name": "Burst Pattern",
+      "description": "Tasks arrive in bursts \u2014 sudden workload spikes",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 4.5,
+        "scheduling": 12.5,
+        "execution": 52.5,
+        "monitoring": 19.0,
+        "reporting": 11.5
+      },
+      "priority_distribution": {
+        "low": 27.5,
+        "medium": 50.5,
+        "high": 22.0
+      }
+    },
+    {
+      "scenario_id": 7,
+      "scenario_name": "Escalating Load",
+      "description": "Task arrival rate increases over time \u2014 growing workload",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 6.5,
+        "scheduling": 13.0,
+        "execution": 60.5,
+        "monitoring": 11.5,
+        "reporting": 8.5
+      },
+      "priority_distribution": {
+        "low": 28.0,
+        "medium": 54.0,
+        "high": 18.0
+      }
+    },
+    {
+      "scenario_id": 8,
+      "scenario_name": "Random Variation 1",
+      "description": "Random task distribution \u2014 seed 101",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 29.0,
+        "scheduling": 24.0,
+        "execution": 6.0,
+        "monitoring": 26.0,
+        "reporting": 15.0
+      },
+      "priority_distribution": {
+        "low": 29.0,
+        "medium": 49.5,
+        "high": 21.5
+      }
+    },
+    {
+      "scenario_id": 9,
+      "scenario_name": "Random Variation 2",
+      "description": "Different random distribution \u2014 seed 202",
+      "num_tasks": 200,
+      "task_distribution": {
+        "planning": 27.5,
+        "scheduling": 17.5,
+        "execution": 22.0,
+        "monitoring": 15.5,
+        "reporting": 17.5
+      },
+      "priority_distribution": {
+        "low": 27.0,
+        "medium": 47.0,
+        "high": 26.0
+      }
+    }
+  ]
+}
